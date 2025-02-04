@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <title>DANUSYS-유지보수 현황</title>
+
+    <!-- bootstrap v5.2.3 -->
+    <script src="../assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- jquery -->
+    <script src="../assets/js/vendor/jquery/jquery.min.js"></script>
+
+    <!-- jodit -->
+    <link rel="stylesheet" href="../assets/js/vendor/jodit/jodit.es2018.en.min.css" />
+    <script type="text/javascript" src="../assets/js/vendor/jodit/jodit.es2018.en.min.js"></script>
+
+    <!-- summernote -->
+    <link rel="stylesheet" href="../assets/js/vendor/summernote/summernote-bs5.css" />
+    <script type="text/javascript" src="../assets/js/vendor/summernote/summernote-bs5.js"></script>
+
+    <!-- include summernote-ko-KR -->
+    <script src="../assets/js/vendor/summernote/lang/summernote-ko-KR.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ASDIE 공통 영역 -->
+      <div data-include-path="./layout/aside.html"></div>
+
+      <div class="contents container-fluid">
+        <!-- HEADER 공통 영역 -->
+        <div data-include-path="./layout/header.html"></div>
+
+        <!-- MAIN CONTENTS -->
+        <main class="main">
+          <div class="container container-issue-view">
+            <div class="row g-3">
+              <div class="col-8">
+                <div class="project-record">
+                  <div class="project-header">
+                    <div class="">
+                      <h3 class="tx-tit">안산U-CITY통합관제센터</h3>
+                      <p class="tx-name"><strong>[충북청주시]</strong> 일부 시방범 카메라 라이브, 저장영상 다운로드, PTZ 제어 지연</p>
+                    </div>
+
+                    <div class="btn-group">
+                      <a href="#" role="button" class="btn btn-sm btn-outline-secondary">수정</a>
+                      <a href="#" role="button" class="btn btn-sm btn-outline-danger">삭제</a>
+                      <a href="#" role="button" class="btn btn-sm btn-outline-primary">목록</a>
+                    </div>
+                  </div>
+
+                  <div class="project-body">
+                    <div class="card">
+                      <div class="card-header">
+                        <p class="card-title">프로젝트 활동 이력</p>
+                      </div>
+                      <div class="card-body">
+                        <div class="nav nav-tabs">
+                          <button class="nav-link active" data-bs-toggle="tab" data-bs-target=".tab-info" type="button">정보</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target=".tab-logs" type="button">로그</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target=".tab-files" type="button">파일</button>
+                        </div>
+
+                        <div class="tab-content">
+                          <!-- 탭 : 정보 -->
+                          <div class="tab-pane tab-info fade show active" id="tab-info" role="tabpanel" tabindex="0">
+                            <!-- 정보 테이블 -->
+                            <div class="table-info">
+                              <table class="table table-light table-striped">
+                                <tbody class="table-group-divider">
+                                  <tr>
+                                    <th>접수자</th>
+                                    <td>권도용</td>
+                                  </tr>
+                                  <tr>
+                                    <th>담당자</th>
+                                    <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalSearchManager">검색</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th>지원유형</th>
+                                    <td>유선지원(원격)</td>
+                                  </tr>
+                                  <tr>
+                                    <th>메인유형</th>
+                                    <td>S/W</td>
+                                  </tr>
+                                  <tr>
+                                    <th>상세유형</th>
+                                    <td>카메라 프로그램 이상</td>
+                                  </tr>
+                                  <tr>
+                                    <th>최초등록일</th>
+                                    <td>2024.09.23</td>
+                                  </tr>
+                                  <tr>
+                                    <th>마감기간</th>
+                                    <td>2024.11.23</td>
+                                  </tr>
+                                  <tr>
+                                    <th>진행기간</th>
+                                    <td>D+51일</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <!-- // 정보 테이블 -->
+
+                            <!-- 진행현황(요약) -->
+                            <div class="progress_state">
+                              <table class="table table-light table-striped">
+                                <thead>
+                                  <tr class="table-success text-center">
+                                    <th colspan="4">진행요약(요약)</th>
+                                  </tr>
+                                  <tr>
+                                    <th>분류</th>
+                                    <th>담당자</th>
+                                    <th>내용</th>
+                                    <th>시간</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                  <tr>
+                                    <th>접수자</th>
+                                    <td>유저1[전략사업기획부]</td>
+                                    <td>최초등록</td>
+                                    <td>24.09.09 13:00:00</td>
+                                  </tr>
+                                  <tr>
+                                    <th>담당자1</th>
+                                    <td>유저2[기술부]</td>
+                                    <td>담당자 배정</td>
+                                    <td>24.09.09 13:00:00</td>
+                                  </tr>
+                                  <tr>
+                                    <th>담당자2[부서장]</th>
+                                    <td>유저3[기술부]</td>
+                                    <td>업무처리 및 담당자 변경 승인</td>
+                                    <td>24.09.09 13:00:00</td>
+                                  </tr>
+                                  <tr>
+                                    <th>담당자3</th>
+                                    <td>유저4[전략사업기획부]</td>
+                                    <td>담당자 재배정</td>
+                                    <td>24.09.09 13:00:00</td>
+                                  </tr>
+                                  <tr>
+                                    <th>담당자4[부서장]</th>
+                                    <td>유저5[전략사업기획부]</td>
+                                    <td>업무처리 및 담당자 변경승인</td>
+                                    <td>24.09.09 13:00:00</td>
+                                  </tr>
+                                  <tr>
+                                    <th>접수자</th>
+                                    <td>유저1[전략사업기획부]</td>
+                                    <td>처리내용 확인 및 최종 완료 승인</td>
+                                    <td>24.09.09 13:00:00</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <!-- // 진행현황(요약) -->
+                          </div>
+
+                          <!-- 탭 : 로그 -->
+                          <div class="tab-pane tab-logs fade" id="tab-logs" role="tabpanel" tabindex="0">
+                            <div class="log-info">
+                              <ul class="list-group log-body">
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>홍길동1[기술부] 님이 이슈 등록 완료</p>
+                                  <p class="tx-date">[24.09.23.14:33]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저1[전략사업기획부]님이 유저2[기술부]를 담당자로 지정</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저2[기술부]님이 유저3[사업2부]님으로 담당자 변경 및 승인요청</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저3 부서장[기술부]님이 유저4[사업2부]님으로 담당자 변경 승인</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저4[사업2부]담당자 배정</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저4[사업2부] 메인유형 H/W에서 S/W 변경</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저4[사업2부] 이슈처리 완료 승인요청</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저5 부서장[사업2부] 이슈처리 승인 완료</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                                <li class="log-row">
+                                  <i class="bi bi-window-dock"></i>
+                                  <p>유저1[전략사업기획부] 이슈처리 최종 승인완료[이슈종료]</p>
+                                  <p class="tx-date">[24.09.23.13:35]</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- 탭 : 파일 -->
+                          <div class="tab-pane tab-files fade" id="tab-files" role="tabpanel" tabindex="0">
+                            <div class="file-box">
+                              <div class="file-util">
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-dark" title="전체 다운로드"><i class="bi bi-download"></i> 전체 다운로드</button>
+                                  <button type="button" class="btn btn-sm btn-outline-dark" title="업로드"><i class="bi bi-upload"></i> 업로드</button>
+                                  <button type="button" class="btn btn-sm btn-outline-dark btn-delete" title="선택 삭제"><i class="bi bi-trash"></i> 선택 삭제</button>
+                                </div>
+                              </div>
+
+                              <div class="container container-file">
+                                <ul class="row assets-list">
+                                  <!-- 반복 -->
+                                  <li class="col-6 col-xxl-3 col-xl-4 col-lg-6 col-sm-6 assets-item">
+                                    <input class="form-check-input btn-chk" type="checkbox" name="selDeleteChk" value="" id="chk1" />
+                                    <div class="btn-assets" role="button" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                      <div class="img-pos">
+                                        <img src="../assets/images/test-img1.png" alt="{파일명} 이미지" />
+                                      </div>
+                                      <div class="txt-name">
+                                        <p title="파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명">파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명</p>
+                                        <button type="button" class="btn btn-sm btn-outline-dark" title="전체다운"><i class="bi bi-download"></i></button>
+                                      </div>
+                                      <p class="txt-date"><i class="bi bi-calendar4"></i> [24.09.23.13:30]</p>
+                                    </div>
+                                  </li>
+
+                                  <li class="col-6 col-xxl-3 col-xl-4 col-lg-6 col-sm-6 assets-item">
+                                    <input class="form-check-input btn-chk" type="checkbox" name="selDeleteChk" value="" id="chk2" />
+                                    <!-- 동영상 파일일 때, .btn-vod 클래스 추가 -->
+                                    <div class="btn-assets btn-vod" role="button" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                      <div class="img-pos">
+                                        <span class="ico-play"><i class="bi bi-play-circle"></i></span>
+                                        <span class="tx-time">08:35</span>
+                                        <img src="../assets/images/test-img2.png" alt="{파일명} 이미지" />
+                                      </div>
+                                      <div class="txt-name">
+                                        <p title="파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명">파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명</p>
+                                        <button type="button" class="btn btn-sm btn-outline-dark" title="전체다운"><i class="bi bi-download"></i></button>
+                                      </div>
+                                      <p class="txt-date"><i class="bi bi-calendar4"></i> [24.09.23.13:30]</p>
+                                    </div>
+                                  </li>
+
+                                  <li class="col-6 col-xxl-3 col-xl-4 col-lg-6 col-sm-6 assets-item">
+                                    <input class="form-check-input btn-chk" type="checkbox" name="selDeleteChk" value="" id="chk3" />
+                                    <div class="btn-assets" role="button" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                      <div class="img-pos">
+                                        <img src="../assets/images/test-img2.png" alt="{파일명} 이미지" />
+                                      </div>
+                                      <div class="txt-name">
+                                        <p title="파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명">파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명</p>
+                                        <button type="button" class="btn btn-sm btn-outline-dark" title="전체다운"><i class="bi bi-download"></i></button>
+                                      </div>
+                                      <p class="txt-date"><i class="bi bi-calendar4"></i> [24.09.23.13:30]</p>
+                                    </div>
+                                  </li>
+
+                                  <li class="col-6 col-xxl-3 col-xl-4 col-lg-6 col-sm-6 assets-item">
+                                    <input class="form-check-input btn-chk" type="checkbox" name="selDeleteChk" value="" id="chk4" />
+                                    <div class="btn-assets" role="button" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                      <div class="img-pos">
+                                        <img src="../assets/images/test-img2.png" alt="{파일명} 이미지" />
+                                      </div>
+                                      <div class="txt-name">
+                                        <p title="파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명">파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명</p>
+                                        <button type="button" class="btn btn-sm btn-outline-dark" title="전체다운"><i class="bi bi-download"></i></button>
+                                      </div>
+                                      <p class="txt-date"><i class="bi bi-calendar4"></i> [24.09.23.13:30]</p>
+                                    </div>
+                                  </li>
+
+                                  <li class="col-6 col-xxl-3 col-xl-4 col-lg-6 col-sm-6 assets-item">
+                                    <input class="form-check-input btn-chk" type="checkbox" name="selDeleteChk" value="" id="chk5" />
+                                    <div class="btn-assets" role="button" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                      <div class="img-pos">
+                                        <img src="../assets/images/test-img2.png" alt="{파일명} 이미지" />
+                                      </div>
+                                      <div class="txt-name">
+                                        <p title="파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명">파일명 파일명파일명 파일명파일명 파일명파일명 파일명파일명 파일명</p>
+                                        <button type="button" class="btn btn-sm btn-outline-dark" title="전체다운"><i class="bi bi-download"></i></button>
+                                      </div>
+                                      <p class="txt-date"><i class="bi bi-calendar4"></i> [24.09.23.13:30]</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <!-- 댓글 영역 -->
+                <div class="reply-box">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="editor-group">
+                        <div class="mainEditor"></div>
+                        <!-- <input placeholder="내용을 작성하고 @(으)로 다른 사람을 멘션하세요." class="form-control editor-trigger" /> -->
+                        <!-- <button type="button" class="btn btn-primary">등록</button> -->
+                      </div>
+
+                      <!-- 댓글 목록 -->
+                      <div class="reply-area">
+                        <ul class="list-group reply-body">
+                          <li>
+                            <div class="reply-row">
+                              <div class="tx-user">
+                                <i class="bi bi-person-fill"></i>
+                                <p>홍길동1</p>
+
+                                <div class="utils">
+                                  <p class="tx-date">(최초등록 : 2024.04.03)</p>
+
+                                  <div class="dropdown">
+                                    <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="bi bi-three-dots-vertical"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                      <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".modalDeleteReply">삭제</button></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="message-box">
+                                <p>신규 이슈 등록을 진행합니다.</p>
+                                <button type="button" class="btn-media" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                  <img src="../assets/images/test-img1.png" class="preview-img" alt="{파일명 test-img1.png}" />
+                                </button>
+                                <button type="button" class="btn-media" data-bs-toggle="modal" data-bs-target=".modalFileSlide">
+                                  <img src="../assets/images/test-img2.png" class="preview-img" alt="{파일명 test-img1.png}" />
+                                </button>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="reply-row">
+                              <div class="tx-user">
+                                <i class="bi bi-person-fill"></i>
+                                <p>홍길동2[전략사업기획부]-부서장</p>
+                                <div class="utils">
+                                  <p class="tx-date">(최초등록 : 2024.04.03)</p>
+
+                                  <div class="dropdown">
+                                    <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="bi bi-three-dots-vertical"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                      <li><button type="button" class="dropdown-item btn-modify">편집</button></li>
+                                      <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".modalDeleteReply">삭제</button></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reply-note tx-msg">
+                                <p>승인내용 : 홍길동2 사원이 현장에서 설치한 내용 모두 확인하여 승인 완료했습니다</p>
+                              </div>
+                              <!-- 기본 : 숨김, 활성화 : .active -->
+                            </div>
+                          </li>
+                          <li>
+                            <div class="reply-row">
+                              <div class="tx-user">
+                                <i class="bi bi-person-fill"></i>
+                                <p>홍길동3[기술부]-부서장</p>
+                                <div class="utils">
+                                  <p class="tx-date">(최초등록 : 2024.04.03)</p>
+
+                                  <div class="dropdown">
+                                    <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="bi bi-three-dots-vertical"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                      <li><button type="button" class="dropdown-item btn-modify">편집</button></li>
+                                      <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".modalDeleteReply">삭제</button></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reply-note tx-msg">
+                                <p>처리내용 : 현장 방문 후 3개 버스 정류장 에어커튼 설치</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="reply-row">
+                              <div class="tx-user">
+                                <i class="bi bi-person-fill"></i>
+                                <p>홍길동3[기술부]</p>
+                                <div class="utils">
+                                  <p class="tx-date">(최초등록 : 2024.04.03)</p>
+
+                                  <div class="dropdown">
+                                    <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="bi bi-three-dots-vertical"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                      <li><button type="button" class="dropdown-item btn-modify">편집</button></li>
+                                      <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".modalDeleteReply">삭제</button></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="reply-note tx-msg">
+                                <p>@권도용</p>
+                                <p>승인내용 : 기술부 내용 모두 확인했습니다. 고생하셨습니다.</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="re-reply">
+                            <div class="reply-row">
+                              <div class="tx-user">
+                                <i class="bi bi-person-fill"></i>
+                                <p>작성자이름</p>
+                              </div>
+
+                              <div class="editor-group">
+                                <input placeholder="답글을 작성하세요." class="form-control editor-trigger" />
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- // 댓글 목록 -->
+                    </div>
+                  </div>
+                </div>
+                <!-- // 댓글 영역 -->
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- // MAIN CONTENTS -->
+      </div>
+    </div>
+
+    <!-- 모달 : 댓글 삭제 확인 -->
+    <div class="modal fade modalDeleteReply" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>이 답변을 삭제하시겠습니까?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade modalFileSlide" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">파일명 파일명</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- -->
+            <div class="box-file-slide">
+              <div class="carousel carousel-dark">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="media-wrapper">
+                      <img src="../assets/images/test-img1.png" class="preview-media" alt="..." />
+
+                      <!-- 프리뷰 영상 태그 : 대응이 필요한 동영상 태그가 필요한 경우 말씀해 주세요. -->
+                      <!-- <iframe width="560" height="315" class="preview-media" src="https://www.youtube.com/embed/7Y_aoc-Qk9o?si=imHKvntrimcrqdKb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                      <!-- <video width="320" height="240" class="preview-media" controls>
+                        <source src="movie.mp4" type="video/mp4" />
+                        <source src="movie.ogg" type="video/ogg" />
+                        Your browser does not support the video tag.
+                      </video> -->
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button">
+                  <span class="carousel-control-prev-icon"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button">
+                  <span class="carousel-control-next-icon"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal : 담당자 검색 -->
+    <div data-include-path="./components/modalSearchManager.html"></div>
+
+    <!-- 마크업 확인용 -->
+    <script type="text/javascript" src="../assets/js/_include.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+    <script src="../assets/js/issue_common.js"></script>
+  </body>
+</html>

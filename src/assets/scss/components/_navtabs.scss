@@ -1,0 +1,157 @@
+.nav-tabs {
+  .nav-item {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.show {
+      .nav-link {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .nav-link {
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid transparent;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    color: $text-color;
+
+    &.first-child {
+      padding-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      isolation: isolate;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-color: transparent;
+      color: $primary;
+    }
+    &.active {
+      color: $primary;
+      background-color: transparent;
+      border-color: transparent;
+      border-bottom-width: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+.nav-pills {
+  .nav-item {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.show {
+      .nav-link {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .nav-link {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    color: $text-color;
+
+    &.first-child {
+      padding-left: 0;
+    }
+
+    &:not(.active):hover,
+    &:not(.active):focus {
+      isolation: isolate;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-color: transparent;
+      color: $primary;
+    }
+    &.active {
+      background-color: $primary;
+      border-color: transparent;
+      font-weight: 600;
+    }
+  }
+}
+
+.tab-content {
+  .sub-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 0;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 0;
+
+    li {
+      display: block;
+
+      .nav-link {
+        text-align: left;
+        font-size: 0.9rem;
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          overflow: hidden;
+          position: relative;
+          top: -0.1rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          margin-right: 0.5rem;
+          border-radius: 100%;
+        }
+        &::before {
+          background-color: $primary;
+        }
+        &.-delayed::before {
+          background-color: $warning;
+        }
+        &.-complated::before {
+          background-color: $success;
+        }
+      }
+    }
+  }
+
+  .sub-tab-content {
+    padding: 1rem 0;
+  }
+
+  .list-group {
+    &-item {
+      border: 0;
+      font-size: 0.9rem;
+      color: $text-color;
+      @include txt-hd;
+
+      .tx-area {
+        color: $primary;
+      }
+    }
+  }
+}

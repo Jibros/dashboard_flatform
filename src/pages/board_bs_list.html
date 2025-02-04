@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <title>DANUSYS-유지보수 현황</title>
+
+    <!-- bootstrap v5.2.3 -->
+    <script src="../assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- jquery -->
+    <script src="../assets/js/vendor/jquery/jquery.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/vendor/datepicker/datepicker.js"></script>
+    <script src="../assets/js/vendor/datepicker/datepicker.ko.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ASDIE 공통 영역 -->
+      <div data-include-path="./layout/aside.html"></div>
+
+      <div class="contents container-fluid">
+        <!-- HEADER 공통 영역 -->
+        <div data-include-path="./layout/header.html"></div>
+
+        <!-- MAIN CONTENTS -->
+        <main class="main">
+          <div class="container container-bs">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="page-title">
+                  <h3>BS관리</h3>
+                </div>
+              </div>
+              <div class="col-12">
+                <!-- BS 건수 -->
+                <div class="bs-state">
+                  <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">BS 진행 <strong>5</strong></li>
+                    <li class="list-group-item">BS 이슈 등록 <strong>2</strong></li>
+                    <li class="list-group-item">이슈 완료 <strong>1</strong></li>
+                  </ul>
+                </div>
+                <!-- // BS 건수 -->
+
+                <!-- 검색 필터 -->
+                <div class="container container-filter">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="card-header">조건을 선택해 주세요.</div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-6 col-xxl-4 col-xl-6 col-lg-6">
+                              <div class="range-date">
+                                <p class="form-label">기간 설정</p>
+                                <!-- default : 1개월 -->
+                                <div class="btn-group" role="tablist" aria-label="기간 설정">
+                                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="pill">전체</button>
+                                  <button type="button" class="btn btn-outline-secondary active" data-bs-toggle="pill">1개월</button>
+                                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="pill">3개월</button>
+                                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="pill">6개월</button>
+                                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="pill">1년</button>
+                                  <button type="button" class="btn btn-outline-secondary btn-write" data-bs-toggle="pill">직접입력</button>
+                                </div>
+                                <div class="input-group calendar-box">
+                                  <input type="text" class="form-control form-control-sm datepicker-here" placeholder="YYYY-MM-DD" data-language="ko" data-date-format="yyyy. mm. dd" disabled />
+                                  <span class="input-group-text">~</span>
+                                  <input type="text" class="form-control form-control-sm datepicker-here" placeholder="YYYY-MM-DD" data-language="ko" data-date-format="yyyy. mm. dd" disabled />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-6 col-xxl-4 col-xl-6 col-lg-6">
+                              <div class="range-chk">
+                                <p class="form-label">범위</p>
+                                <!-- default : 일간 -->
+                                <div class="form-check-group">
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rangeSelect" id="rangeSelectDay" checked="checked" />
+                                    <label class="form-check-label" for="rangeSelectDay">일간</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rangeSelect" id="rangeSelectWeek" />
+                                    <label class="form-check-label" for="rangeSelectWeek">주간</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rangeSelect" id="rangeSelectMonth" />
+                                    <label class="form-check-label" for="rangeSelectMonth">월간</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer text-end">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-primary">조회</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12"></div>
+                  </div>
+                </div>
+                <!-- // 검색 필터 -->
+              </div>
+
+              <div class="col-12">
+                <div class="table-board">
+                  <div class="table-header">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">BS등록</button>
+                  </div>
+                  <div class="table-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover table-striped">
+                        <thead class="text-center">
+                          <tr>
+                            <th>No</th>
+                            <th>접수자</th>
+                            <th>담당자(고객)</th>
+                            <th>지역(수요기관)</th>
+                            <th>일자</th>
+                            <th>지원유형</th>
+                            <th>점검내용</th>
+                            <th>대응내용</th>
+                            <th>이슈접수</th>
+                            <th>이슈현황</th>
+                            <th>상세보기</th>
+                          </tr>
+                        </thead>
+                        <tbody class="text-center">
+                          <tr>
+                            <td>10</td>
+                            <td>홍길동</td>
+                            <td>홍홍홍 주무관</td>
+                            <td>경기도/광명센터</td>
+                            <td>YYYY-MM-DD hh:mm</td>
+                            <td>방문지원</td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>없음</td>
+                            <td>-</td>
+                            <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">상세보기</button></td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>홍길동</td>
+                            <td>홍홍홍 주무관</td>
+                            <td>경기도/광명센터</td>
+                            <td>YYYY-MM-DD hh:mm</td>
+                            <td>유선(원격)</td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>접수</td>
+                            <td>완료</td>
+                            <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">상세보기</button></td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>홍길동</td>
+                            <td>홍홍홍 주무관</td>
+                            <td>경기도/광명센터</td>
+                            <td>YYYY-MM-DD hh:mm</td>
+                            <td>방문지원</td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>접수</td>
+                            <td>진행중</td>
+                            <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">상세보기</button></td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>홍길동</td>
+                            <td>홍홍홍 주무관</td>
+                            <td>경기도/광명센터</td>
+                            <td>YYYY-MM-DD hh:mm</td>
+                            <td>방문지원</td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>없음</td>
+                            <td>-</td>
+                            <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">상세보기</button></td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>홍길동</td>
+                            <td>홍홍홍 주무관</td>
+                            <td>경기도/광명센터</td>
+                            <td>YYYY-MM-DD hh:mm</td>
+                            <td>방문지원</td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>없음</td>
+                            <td>-</td>
+                            <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">상세보기</button></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>홍길동</td>
+                            <td>홍홍홍 주무관</td>
+                            <td>경기도/광명센터</td>
+                            <td>YYYY-MM-DD hh:mm</td>
+                            <td>방문지원</td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">VMS 라이센스정책 점검요청 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>
+                              <p class="txt-hd" role="button" data-bs-trigger="focus" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다." tabindex="0">사업부와 연구소 확인 후 답변 예정 및 글자가 많을 때 이렇게 모든 걸 다 보여주면 좋겠어서 이 기능이 필요할까? 싶지만 어쨌든 필요하다고 하니 넣어봅니다.</p>
+                            </td>
+                            <td>없음</td>
+                            <td>-</td>
+                            <td><button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target=".modalBSDetail">상세보기</button></td>
+                          </tr>
+                          <tr>
+                            <td colspan="11">
+                              <div class="no-data">
+                                <i class="bi bi-exclamation-triangle"></i>
+                                <p class="tx-msg">검색된 내용이 없습니다.</p>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col text-center">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- // MAIN CONTENTS -->
+      </div>
+    </div>
+
+    <!-- 모달 : BS 신규등록 || 상세보기 -->
+    <div class="modal fade modalBSDetail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">BS 상세보기 | BS 신규 등록</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="box-confirm-state">
+              <div class="input-group mb-3">
+                <span class="input-group-text">BS고유번호</span>
+                <input type="text" placeholder="BS 고유번호는 자동 생성됩니다." value="BS20241014-001" readonly class="form-control" />
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-4 mb-3">
+                      <label for="bsInput1" class="form-label">접수자</label>
+                      <input type="text" id="bsInput1" list="datalistOptions" class="form-control" placeholder="검색어를 입력해 주세요." value="홍길동[전략기획사업부]" />
+                    </div>
+                    <div class="col-4 mb-3">
+                      <label for="bsInput2" class="form-label">담당자(고객)</label>
+                      <input type="text" id="bsInput2" list="datalistOptions" class="form-control" placeholder="검색어를 입력해 주세요." value="홍길동 주무관" />
+                    </div>
+                    <div class="col-4 mb-3">
+                      <label for="bsInput3" class="form-label">지원유형</label>
+                      <select id="bsInput3" class="form-select" aria-label="지역">
+                        <option selected>지원 유형을 선택해 주세요.</option>
+                        <option>방문지원</option>
+                        <option>유선(원격)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <label for="bsInput4" class="form-label">지역</label>
+                      <select id="bsInput4" class="form-select" aria-label="지역">
+                        <option selected>지역을 선택해 주세요.</option>
+                        <option>서울</option>
+                        <option>경기도</option>
+                        <option>충청도</option>
+                        <option>경상북도</option>
+                        <option>경상남도</option>
+                        <option>전라북도</option>
+                        <option>전라남도</option>
+                        <option>강원도</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="bsInput5" class="form-label">수요기관</label>
+                      <select id="bsInput5" class="form-select" aria-label="수요기관">
+                        <option selected>지역을 선택해 주세요.</option>
+                        <option>안양시스마트도시통합센터</option>
+                        <option>시흥시도시정보통합센터</option>
+                        <option>군포시CCTV통합관제센터</option>
+                        <option>수원시교통정보센터</option>
+                        <option>화성시스마트도시통합운영센터</option>
+                        <option>동탄시민안전교육센터</option>
+                        <option>안산U-CITY통합관제센터</option>
+                        <option>의왕시CCTV통합관제센터</option>
+                        <option>통일교회(가평)</option>
+                        <option>포천시CCTV스마트안심센터</option>
+                        <option>양주시통합관제센터</option>
+                        <option>동두천시CCTV통합관제센터</option>
+                        <option>의정부CCTV통합관제센터</option>
+                        <option>남양주CCTV통합관제센터</option>
+                        <option>용인시방범CCTV관제센터</option>
+                        <option>하남시통합관제센터</option>
+                        <option>이천시CCTV통합관제센터</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="bsInput6" class="form-label">일정</label>
+                      <input type="text" id="bsInput6" class="form-control datepicker-here" placeholder="YYYY-MM-DD" data-language="ko" data-date-format="yyyy. mm. dd" readonly />
+                    </div>
+                  </div>
+                  <hr class="border" />
+                  <div class="row">
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="bsInput7" class="form-label">점검내용</label>
+                        <input type="email" id="bsInput7" class="form-control" placeholder="점검내용을 작성해 주세요(최대 100자)" maxlength="100" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="bsInput8" class="form-label">답변내용</label>
+                        <textarea id="bsInput8" class="form-control" rows="2" placeholder="답변내용을 작성해 주세요(최대 100자)" maxlength="100"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <!-- BS 신규 등록 시 -->
+                  <div class="footer-msg">
+                    <button type="button" class="btn btn-primary">등록</button>
+                  </div>
+                  <!-- BS 상세보기 클릭 시 -->
+                  <div class="footer-msg">
+                    <p class="tx-msg">BS 저장 후, 신규 이슈 등록이 가능합니다.</p>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">취소</button>
+                      <button type="button" class="btn btn-primary btn-save">저장</button>
+                      <!-- 수정 시 노출 (신규 등록 시 미노출) -->
+                      <button type="button" class="btn btn-primary btn-new-issue" disabled>이슈 등록(AS)</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 모달 : BS 상세보기 -->
+
+    <!-- 마크업 확인용 -->
+    <script type="text/javascript" src="../assets/js/_include.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/board_bs_common.js"></script>
+  </body>
+</html>

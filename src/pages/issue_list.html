@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <title>DANUSYS-유지보수 현황</title>
+
+    <!-- bootstrap v5.2.3 -->
+    <script src="../assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- jquery -->
+    <script src="../assets/js/vendor/jquery/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ASDIE 공통 영역 -->
+      <div data-include-path="./layout/aside.html"></div>
+
+      <div class="contents container-fluid">
+        <!-- HEADER 공통 영역 -->
+        <div data-include-path="./layout/header.html"></div>
+
+        <!-- MAIN CONTENTS -->
+        <main class="main">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="page-header">
+                  <h3 class="tx-tit">이슈 관리</h3>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="container container-filter">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="col-4">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="검색어를 입력해 주세요." aria-label="검색어를 입력해 주세요." />
+                          <button class="btn btn-outline-secondary" type="button">검색</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <select class="form-select" aria-label="연도">
+                        <option selected>연도를 선택해 주세요.</option>
+                        <option value="1">전체</option>
+                        <option value="2">2025</option>
+                        <option value="3">2024</option>
+                        <option value="4">2023</option>
+                        <option value="5">2022</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select class="form-select" aria-label="월">
+                        <option selected>월을 선택해 주세요.</option>
+                        <option value="1">12월</option>
+                        <option value="2">11월</option>
+                        <option value="3">10월</option>
+                        <option value="4">9월</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select class="form-select" aria-label="지역">
+                        <option selected>지역을 선택해 주세요.</option>
+                        <option value="1">서울</option>
+                        <option value="2">경기도</option>
+                        <option value="3">충청도</option>
+                        <option value="4">강원도</option>
+                        <option value="5">경상남도</option>
+                        <option value="6">경상북도</option>
+                        <option value="7">전라남도</option>
+                        <option value="8">전라북도</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select class="form-select" aria-label="유형">
+                        <option selected>유형을 선택해 주세요.</option>
+                        <option value="1">H/W</option>
+                        <option value="2">S/W</option>
+                        <option value="3">OS</option>
+                        <option value="4">NW</option>
+                        <option value="5">요청사항</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 text-end">
+                      <div class="tab-align">
+                        <p class="text-label">정렬기준</p>
+                        <ul class="nav" role="tablist">
+                          <li><button class="nav-link active" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">진행이슈</button></li>
+                          <li><button class="nav-link" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">지연이슈</button></li>
+                          <li><button class="nav-link" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">완료이슈</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="container g-0 container-issue">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="no-data">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <p class="tx-msg">현재 등록된 이슈가 없습니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row-cols-2 row-cols-xxxl-4 row-cols-xxl-3 g-3 issue-row">
+                    <!-- 반복 -->
+                    <!-- html : ../assets/js/issue_common.js -->
+                    <!-- //반복 -->
+                  </div>
+
+                  <div class="row">
+                    <div class="col text-center">
+                      <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modal : 담당자 검색 -->
+    <div data-include-path="./components/modalSearchManager.html"></div>
+
+    <!-- js : ../assets/js/common.js -->
+    <div class="modal fade logStateModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">{수요기관} 진행 현황</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="box-log-list">
+              <div class="log-header">
+                <i class="bi bi-person-fill"></i>
+                <p class="tx-manager">홍길동(접수자) [전략사업기획부]</p>
+              </div>
+
+              <ul class="list-group log-body">
+                <li>
+                  <div class="log-row">
+                    <div class="tx-user">
+                      <i class="bi bi-person-fill"></i>
+                      <p>홍길동1[기술부]</p>
+                      <p class="tx-date">(최초등록 : 2024.04.03)</p>
+                    </div>
+                    <div class="tx-msg">
+                      <p>[수도권/광명] H/W,</p>
+                      <p>접수내용 :버스정류장 3개소 에이커튼 운영 요망</p>
+                      <p>담당자 : 홍길동1[기술부]</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="log-row">
+                    <div class="tx-user">
+                      <i class="bi bi-person-fill"></i>
+                      <p>홍길동2[전략사업기획부]-부서장</p>
+                      <p class="tx-date">(처리 승인 : 2024.04.03)</p>
+                    </div>
+                    <div class="tx-msg">
+                      <p>승인내용 : 홍길동2 사원이 현장에서 설치한 내용 모두 확인하여 승인 완료했습니다</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="log-row">
+                    <div class="tx-user">
+                      <i class="bi bi-person-fill"></i>
+                      <p>홍길동3[기술부]-부서장</p>
+                      <p class="tx-date">(최초등록 : 2024.04.03)</p>
+                    </div>
+                    <div class="tx-msg">
+                      <p>처리내용 : 현장 방문 후 3개 버스 정류장 에어커튼 설치</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="log-row">
+                    <div class="tx-user">
+                      <i class="bi bi-window-dock"></i>
+                      <p>시스템</p>
+                      <p class="tx-date">(최종승인 : 2024.04.03)</p>
+                    </div>
+                    <div class="tx-msg">
+                      <p>승인내용 : 기술부 내용 모두 확인했습니다. 고생하셨습니다.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <!-- 이슈 종료 : .log-end -->
+                  <div class="log-row --end">
+                    <div class="tx-user">
+                      <p class="tx-date">(이슈종료 : 2024.04.03)</p>
+                    </div>
+                    <div class="tx-msg">
+                      <p>해당 이슈가 종료되었습니다.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 마크업 확인용 -->
+    <script type="text/javascript" src="../assets/js/_include.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/issue_common.js"></script>
+  </body>
+</html>

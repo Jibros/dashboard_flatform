@@ -1,0 +1,193 @@
+/*
+ * 페이지 레이아웃 (전역)
+ */
+html {
+  $minWidth: calc(1280px - $grid-gutter-width);
+  overflow-x: auto;
+  height: 100%;
+
+  body {
+    min-width: $minWidth;
+    height: 100%;
+  }
+
+  @media (max-width: $minWidth) {
+    .container {
+      max-width: $minWidth;
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $background-color;
+
+  .aside {
+    display: block;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1021;
+    flex-shrink: 0;
+    width: var(--aside-wid);
+    box-shadow: 0 0 transparent !important;
+    background-color: $background-color-aside;
+    transition: width 0.3s ease;
+    @include scrollbar();
+
+    .inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      padding: var(--padding-layout);
+
+      .navbar-brand {
+        display: block;
+        flex-basis: 2.5rem;
+        overflow: hidden;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0;
+        margin-bottom: 4rem;
+        padding: 0;
+        border-radius: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .navbar {
+        display: flex;
+        align-items: start;
+        flex-grow: 0;
+
+        .nav {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .sub-nav {
+            margin: 0;
+            padding-left: 1rem;
+
+            .nav-item {
+              .nav-link {
+                font-size: 1rem;
+              }
+            }
+          }
+          &-item {
+            font-size: 1.1rem;
+          }
+          &-link {
+            padding-left: 0;
+            color: rgba(255, 255, 255, 0.6);
+
+            &.active,
+            &:hover {
+              color: rgba(255, 255, 255, 1);
+            }
+            &[data-bs-toggle='collapse'] {
+              &:after {
+                display: inline-block;
+                content: '';
+                background-repeat: no-repeat;
+                background-size: 0.875rem 0.875rem;
+                width: 0.875rem;
+                height: 0.875rem;
+                margin-left: auto;
+                transition: all 0.2s ease-in-out;
+              }
+
+              // Expanded
+              &[aria-expanded='true'] {
+                &:after {
+                  color: var(--primary);
+                  transform: rotate(90deg);
+                }
+              }
+            }
+
+            .bi {
+              margin-right: 0.4rem;
+            }
+          }
+        }
+      }
+      .new-issue {
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 2rem;
+        margin-bottom: 1rem;
+
+        .btn-new {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--aside-wid));
+    margin-left: var(--aside-wid);
+    padding: 0;
+    background-color: $background-color;
+
+    .header {
+      display: flex;
+      flex-wrap: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+      border-bottom: 1px solid #e3e3e3;
+      background-color: #fff;
+      padding: 1rem 0;
+
+      &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand-logo {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        flex: 0 1 var(--aside-wid);
+
+        .text_logo {
+          font-weight: 600;
+          font-size: 1.2rem;
+          vertical-align: middle;
+          line-height: 2rem;
+        }
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: var(--padding-layout);
+      justify-content: start;
+
+      .container {
+        margin-left: 0;
+
+        .page-title {
+          // margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}

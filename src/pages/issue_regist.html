@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <title>DANUSYS-유지보수 현황</title>
+
+    <!-- bootstrap v5.2.3 -->
+    <script src="../assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- jquery -->
+    <script src="../assets/js/vendor/jquery/jquery.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/vendor/datepicker/datepicker.js"></script>
+    <script src="../assets/js/vendor/datepicker/datepicker.ko.js"></script>
+
+    <!-- jodit -->
+    <link rel="stylesheet" href="../assets/js/vendor/jodit/jodit.es2018.en.min.css" />
+    <script type="text/javascript" src="../assets/js/vendor/jodit/jodit.es2018.en.min.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ASDIE 공통 영역 -->
+      <div data-include-path="./layout/aside.html"></div>
+
+      <div class="contents container-fluid">
+        <!-- HEADER 공통 영역 -->
+        <div data-include-path="./layout/header.html"></div>
+
+        <!-- MAIN CONTENTS -->
+        <main class="main">
+          <div class="container container-regist">
+            <div class="row g-3">
+              <div class="col-12">
+                <!-- 새 이슈 등록 -->
+                <div class="issue-regist">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">새 이슈 등록</h5>
+                    </div>
+
+                    <div class="card-body">
+                      <form>
+                        <div class="row">
+                          <div class="col">
+                            <label for="regist1" class="form-label">제목</label>
+                            <input type="text" id="regist1" class="form-control" placeholder="제목을 입력하세요." />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label for="regist2" class="form-label">지역</label>
+                            <select id="regist2" class="form-select" aria-label="지역">
+                              <option selected>지역을 선택해 주세요.</option>
+                              <option>서울</option>
+                              <option>경기도</option>
+                              <option>충청도</option>
+                              <option>경상북도</option>
+                              <option>경상남도</option>
+                              <option>전라북도</option>
+                              <option>전라남도</option>
+                              <option>강원도</option>
+                            </select>
+                          </div>
+                          <div class="col">
+                            <label for="regist3" class="form-label">수요기관</label>
+                            <select id="regist3" class="form-select" aria-label="수요기관">
+                              <option selected>지역을 선택해 주세요.</option>
+                              <option>안양시스마트도시통합센터</option>
+                              <option>시흥시도시정보통합센터</option>
+                              <option>군포시CCTV통합관제센터</option>
+                              <option>수원시교통정보센터</option>
+                              <option>화성시스마트도시통합운영센터</option>
+                              <option>동탄시민안전교육센터</option>
+                              <option>안산U-CITY통합관제센터</option>
+                              <option>의왕시CCTV통합관제센터</option>
+                              <option>통일교회(가평)</option>
+                              <option>포천시CCTV스마트안심센터</option>
+                              <option>양주시통합관제센터</option>
+                              <option>동두천시CCTV통합관제센터</option>
+                              <option>의정부CCTV통합관제센터</option>
+                              <option>남양주CCTV통합관제센터</option>
+                              <option>용인시방범CCTV관제센터</option>
+                              <option>하남시통합관제센터</option>
+                              <option>이천시CCTV통합관제센터</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label for="regist4" class="form-label">유형검색</label>
+                            <select id="regist4" class="form-select" aria-label="유형검색">
+                              <option selected>-- 선택 --</option>
+                              <option>H/W</option>
+                              <option>S/W</option>
+                              <option>OS</option>
+                              <option>NW</option>
+                              <option>요청사항</option>
+                            </select>
+                          </div>
+                          <div class="col">
+                            <label for="regist5" class="form-label">상세유형</label>
+                            <select id="regist5" class="form-select" aria-label="상세유형">
+                              <option selected>-- 선택 --</option>
+                            </select>
+                          </div>
+                          <div class="col">
+                            <label for="regist6" class="form-label">세부유형(1)</label>
+                            <select id="regist6" class="form-select" aria-label="세부유형(1)">
+                              <option selected>-- 선택 --</option>
+                            </select>
+                          </div>
+                          <div class="col">
+                            <label for="regist7" class="form-label">세부유형(2)</label>
+                            <select id="regist7" class="form-select" aria-label="세부유형(2)">
+                              <option selected>-- 선택 --</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col">
+                                <label for="regist8" class="form-label">일정</label>
+
+                                <div class="input-group">
+                                  <input type="text" id="regist8" class="form-control calendar datepicker-here" placeholder="YYYY-MM-DD" data-language="ko" data-date-format="yyyy. mm. dd" readonly />
+                                  <span class="input-group-text">~</span>
+                                  <input type="text" class="form-control calendar datepicker-here" placeholder="YYYY-MM-DD" data-language="ko" data-date-format="yyyy. mm. dd" readonly />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <label for="regist9" class="form-label">지원유형</label>
+                            <select id="regist9" class="form-select" aria-label="지원유형">
+                              <option selected>지원유형을 선택해주세요.</option>
+                              <option>방문지원</option>
+                              <option>유선지원(원격)</option>
+                            </select>
+                          </div>
+
+                          <div class="col-3">
+                            <label for="regist10" class="form-label">BS고유번호</label>
+                            <input type="text" id="regist10" class="form-control" placeholder="BS고유번호를 입력하세요." />
+                          </div>
+                        </div>
+
+                        <hr />
+                      </form>
+
+                      <div class="editor-box">
+                        <!-- 에디터 사용 시 -->
+                        <div id="editor"></div>
+                      </div>
+                    </div>
+
+                    <div class="card-footer text-end">
+                      <button class="btn btn-primary btn-regist" type="button">등록하기</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 새 이슈 등록 -->
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- // MAIN CONTENTS -->
+      </div>
+    </div>
+
+    <div class="modal fade modalRegistAlert" aria-hidden="true" tabindex="-1">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="text-center">신규 이슈 등록이 완료 되었습니다.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-sm btn-primary" data-bs-toggle="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 마크업 확인용 -->
+    <script type="text/javascript" src="../assets/js/_include.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+
+    <script>
+      const editor = Jodit.make("#editor", {
+        autofocus: true,
+        useSearch: false,
+        uploader: {
+          insertImageAsBase64URI: true,
+        },
+        language: "ko",
+        // "theme": "dark",
+        theme: "custom",
+        toolbarButtonSize: "large",
+        defaultMode: "1",
+        toolbarAdaptive: false,
+        showCharsCounter: false,
+        showWordsCounter: false,
+        showXPathInStatusbar: false,
+        minHeight: 500,
+        maxHeight: 700,
+        buttons: "bold,italic,underline,strikethrough,eraser,|,ul,ol,indent,outdent,|,font,fontsize,paragraph,lineHeight,superscript,subscript,|,image,selectall,hr,table,link",
+      });
+    </script>
+  </body>
+</html>

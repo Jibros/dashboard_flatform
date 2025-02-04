@@ -1,0 +1,21 @@
+// Bootstrap Framework scss
+@import 'bootstrap/bootstrap';
+
+// Default Variables
+@import 'fonts';
+@import 'variables', 'mixins', 'reset';
+
+// plugins
+@import 'plugins/datepicker';
+
+// Components
+@import './components/navtabs', './components/modal', './components/datepicker', './components/charts';
+
+// Common
+@import 'layout', 'common';
+
+// Pages
+@import 'pages/login';
+@import 'pages/dashboard';
+@import 'pages/issue';
+@import 'pages/bsboard';

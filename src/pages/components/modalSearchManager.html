@@ -1,0 +1,89 @@
+<!-- js : ../assets/js/common.js -->
+<div class="modal fade modalSearchManager" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">담당자 검색</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="box-search-manager">
+          <!-- 스텝 1 : 담당자 검색 -->
+          <div class="step">
+            <div class="card">
+              <div class="card-header">
+                <p class="card-title"><label for="ab1" class="form-label">부서장/부서원을 검색해 주세요.</label></p>
+              </div>
+
+              <div class="card-body">
+                <div class="input-group mb-3">
+                  <!-- list:datalist -->
+                  <input type="text" id="ab1" list="datalistOptions" class="form-control" placeholder="검색어를 입력해 주세요." aria-label="검색어를 입력해 주세요." />
+                  <button class="btn btn-outline-secondary" type="button">검색</button>
+                  <datalist id="datalistOptions">
+                    <option value="권도용"></option>
+                    <option value="권도훈"></option>
+                    <option value="권도복"></option>
+                    <option value="권도술"></option>
+                    <option value="권도길"></option>
+                  </datalist>
+                </div>
+
+                <div class="no-msg text-center">
+                  <i class="bi bi-x-circle"></i>
+                  <p class="">부서장/부서원을 검색해 주세요.</p>
+                </div>
+                <div class="list-group" role="tablist">
+                  <button type="button" data-bs-toggle="pill" class="list-group-item list-group-item-action">홍길동1</button>
+                  <button type="button" data-bs-toggle="pill" class="list-group-item list-group-item-action">홍길동2</button>
+                  <button type="button" data-bs-toggle="pill" class="list-group-item list-group-item-action">홍길동3</button>
+                  <button type="button" data-bs-toggle="pill" class="list-group-item list-group-item-action">홍길동4</button>
+                </div>
+              </div>
+              <div class="card-footer text-end">
+                <button type="button" class="btn btn-sm btn-primary btn-next" disabled>다음</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 스텝 2 : 담당자 지정 승인 요청 -->
+          <div class="step">
+            <div class="card">
+              <div class="card-header">
+                <button type="button" class="btn btn-back"><i class="bi bi-chevron-left"></i></button>
+                <p class="card-title">승인 요청</p>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <tbody class="table-group-divider">
+                    <tr>
+                      <th>접수자</th>
+                      <td>권도용</td>
+                    </tr>
+                    <tr>
+                      <th>접수자 메모</th>
+                      <td>
+                        <input type="text" class="form-control form-control-sm" placeholder="텍스트를 입력해 주세요." aria-label="텍스트를 입력해 주세요." />
+                        <!-- <p class="tx-msg">기술부 최영훈 대리 처리 요망</p> -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>담당자</th>
+                      <td>최영훈</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer text-end">
+                <button type="button" class="btn btn-sm btn-primary btn-confirm">승인요청</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+      </div>
+    </div>
+  </div>
+</div>

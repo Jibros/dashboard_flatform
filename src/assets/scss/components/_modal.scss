@@ -1,0 +1,246 @@
+/* 
+ * 모달 - 담당자 지정 
+ */
+.modalSearchManager {
+  .box-search-manager {
+    .step {
+      display: none;
+      &:first-child {
+        display: block;
+      }
+    }
+    .card {
+      &-header {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .btn-back {
+          position: absolute;
+          left: 0;
+
+          & + .card-title {
+            width: calc(100% - 2rem);
+            text-align: center;
+            padding-left: 2rem;
+          }
+        }
+      }
+      &-title {
+        margin: 0;
+
+        .form-label {
+          margin-bottom: 0;
+        }
+      }
+
+      &-body {
+        .no-msg {
+          padding: 3rem 0;
+          color: $gray-500;
+        }
+      }
+
+      &-footer {
+        .btn {
+        }
+      }
+      .tx-msg {
+        font-size: $form-text-font-style;
+      }
+    }
+  }
+}
+
+/* 
+ * 모달 - 이슈관리 목록 > 카드(진행중/지연중/완료) 뱃지 > 진행 현황 요약 
+ */
+.logStateModal {
+  .box-log-list {
+    .log-header {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0;
+      .bi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        border-radius: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: $gray-800;
+      }
+      .tx-manager {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    .log-body {
+      > li {
+        padding: 1rem 0;
+        border-top: 1px solid $gray-200;
+
+        &:first-child {
+          border-top: 2px solid $gray-800;
+        }
+
+        .log-row {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .tx-user {
+            display: flex;
+            align-items: center;
+
+            .bi {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 1.5rem;
+              height: 1.5rem;
+              margin-right: 0.5rem;
+              border-radius: 100%;
+              text-align: center;
+              font-size: 1.2rem;
+              color: #fff;
+              background-color: $gray-400;
+            }
+          }
+
+          .tx-msg {
+            outline: 1px solid $gray-300;
+            padding: 1rem 1rem 1rem 2rem;
+            border-radius: 0.4rem;
+            background-color: $gray-100;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            color: $gray-700;
+            background-color: #fff;
+          }
+
+          .tx-date {
+            flex-grow: 1;
+            padding-left: 1rem;
+            font-size: 0.8rem;
+            color: $gray-600;
+            text-align: right;
+          }
+
+          &.--end {
+            .tx-msg {
+              padding-top: 2rem;
+              padding-bottom: 2rem;
+              text-align: center;
+              font-size: 1.2rem;
+              color: #fff;
+              background-color: $gray-700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 
+ * 모달 - BS관리 > BS 신규 등록
+ */
+.modalBSDetail {
+  .box-confirm-state {
+    input:read-only {
+      background-color: $gray-200;
+    }
+
+    .card-footer {
+      .footer-msg {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1rem;
+
+        .tx-msg {
+          font-size: 0.9rem;
+          color: $gray-600;
+        }
+      }
+    }
+  }
+}
+
+/* 
+ * 모달 - 이슈관리 > 상세 > 파일 확장 
+ */
+.modalFileSlide {
+  .modal-fullscreen {
+    padding: 1rem;
+    .modal-content {
+      border-radius: 1rem;
+    }
+  }
+  .box-file-slide {
+    height: 100%;
+    // @assets/scss/bootstrap/_carousel.scss
+    .carousel {
+      height: 100%;
+
+      .carousel-inner {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .media-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          .preview-media {
+            transform: scale(1);
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+          iframe.preview-media,
+          video.preview-media {
+            max-width: 50rem;
+            max-height: 30rem;
+          }
+        }
+        // .media-wrapper {
+        //   overflow: hidden;
+        //   position: relative;
+        //   width: 100%;
+        //   height: 0;
+        //   padding-bottom: 56.26%;
+        //   .preview-img {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //   }
+        // }
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        &:hover,
+        &:focus {
+        }
+      }
+    }
+  }
+}

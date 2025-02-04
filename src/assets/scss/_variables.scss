@@ -1,0 +1,87 @@
+// utils/_variables.scss
+
+$text-color: #333;
+$background-color: #f5f9fc;
+$background-color-aside: #343a40;
+
+$--image-url: '../assets/images/';
+$default-font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+  'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  sans-serif;
+$font-messapia: 'Messapia', $default-font-family;
+$font-monospace: monospace, 'Courier New', sans-serif;
+
+//미디어쿼리
+$tablet: 767px;
+$desktop: 1280px;
+
+@media screen and (max-width: 340px) {
+  html {
+    font-size: 14px;
+  }
+}
+@mixin mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+// 크기가 tablet+1 이상, desktop 이하
+@mixin tablet {
+  @media (min-width: ($tablet + 1)) and (max-width: $desktop) {
+    @content;
+  }
+}
+// 크기가 desktop 이상
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+//rem계산
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return calc($value / ($value * 0 + 1px));
+}
+@function rem($pxValue) {
+  @return #{calc(stripUnit($pxValue) / stripUnit($html-font-size))}rem;
+}
+
+/* bootstrap variables & Theme-colors Custom */
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  color-scheme: light;
+}
+
+/* default variables */
+:root {
+  --header-hgt: 3rem;
+  --aside-wid: 20rem;
+
+  --padding-layout: 1.5rem;
+
+  --black-font-color: #333;
+}
+
+// summernote custom css
+.note-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  .note-updateBtn {
+    flex: auto;
+    justify-content: flex-end;
+    .note-btn {
+      flex-grow: 0;
+      color: #fff;
+    }
+  }
+}
+.note-editable {
+  .mention-item {
+    color: $primary;
+  }
+}
+.note-popover.popover {
+  position: absolute;
+}

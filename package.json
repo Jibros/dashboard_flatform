@@ -1,0 +1,18 @@
+{
+  "name": "danusys-management-platform",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/assets/scss/main.scss ./src/assets/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.4.2",
+    "sass": "^1.83.4"
+  }
+}

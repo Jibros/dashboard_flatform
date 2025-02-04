@@ -1,0 +1,164 @@
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+) !default;
+// scss-docs-end gray-colors-map
+
+// scss-docs-start color-variables
+$blue: #5c60f5 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #f36 !default;
+$orange: #fd7e14 !default;
+$yellow: #ff8c00 !default;
+$green: #0c8 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$black: #000;
+$white: #fff;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  'blue': $blue,
+  'indigo': $indigo,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'black': $black,
+  'white': $white,
+  'gray': $gray-600,
+  'gray-dark': $gray-800,
+) !default;
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary: #5c60f5;
+$secondary: $gray-600;
+$success: #0c8;
+$info: #17a2b8;
+$warning: #ff8c00;
+$danger: #f36;
+$light: $gray-100;
+$dark: #343a40;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+) !default;
+// scss-docs-end theme-colors-map
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+// scss-docs-end spacer-variables-maps
+
+// Badges
+
+// scss-docs-start badge-variables
+$badge-font-size: 0.75em !default;
+$badge-color: $white;
+$badge-padding-y: 0.35rem;
+$badge-padding-x: 0.65em !default;
+// scss-docs-end badge-variables
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  // 기존 1200px에서 1280px로 증가
+  xxl: 1600px,
+  // 기존 1400px에서 1600px로 증가
+  xxxl: 1920px,
+  // 1920px 이상 대응을 위한 새로운 브레이크포인트
+);
+// scss-docs-end grid-breakpoints
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  // xl: 1280px에 적합한 컨테이너 너비
+  xxl: 1440px,
+  // xxl: 1600px에 적합한 컨테이너 너비
+  xxxl: 1720px,
+  // xxxl: 1920px에 적합한 컨테이너 너비
+);
+// scss-docs-end container-max-widths
+
+// scss-docs-start border-variables
+$border-width: 1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+// scss-docs-start table-variables
+$table-cell-padding-y: 0.8rem;
+$table-cell-padding-x: 0.8rem;
+$table-cell-padding-y-sm: 0.25rem;
+$table-cell-padding-x-sm: 0.25rem;
+$table-th-font-weight: 600;
+$table-hover-bg-factor: 0.035;
+
+// Carousel
+
+// scss-docs-start carousel-variables
+$carousel-control-width: 10%;

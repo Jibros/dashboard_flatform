@@ -1,0 +1,98 @@
+/*
+ * BS 관리
+ */
+.container-bs {
+  .bs-state {
+    .list-group {
+      .list-group-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        strong {
+          display: block;
+          &::after {
+            content: ' 건';
+          }
+        }
+      }
+    }
+  }
+
+  .container-filter {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid $gray-300;
+    border-radius: 0.4rem;
+    background-color: $white;
+
+    // .card-body {
+    //   @include media-breakpoint-down(xxl) {
+    //     .row {
+    //       gap: 1rem 0;
+    //     }
+    //   }
+    // }
+    .range-date {
+      display: flex;
+      flex-direction: column;
+
+      .calendar-box {
+        margin-top: 0.5rem;
+      }
+    }
+    .range-chk {
+      display: flex;
+      flex-direction: column;
+      // gap: 0.5rem;
+
+      .form-check-group {
+        padding: 0.4rem 0;
+      }
+    }
+    .form-label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .table-board {
+    padding: 1rem;
+    border: 1px solid $gray-300;
+    border-radius: 0.4rem;
+    background-color: $white;
+
+    .table-header {
+      display: flex;
+      padding-bottom: 1rem;
+    }
+
+    .table-body {
+      border: 1px solid $gray-300;
+      border-bottom: 0;
+
+      .table {
+        table-layout: fixed;
+        width: 100%;
+        margin-bottom: 0;
+
+        td {
+          word-wrap: break-word;
+          white-space: normal;
+          font-size: 0.9rem;
+          word-break: keep-all;
+
+          .txt-hd {
+            text-align: center;
+            @include txt-hd;
+            max-width: 15rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

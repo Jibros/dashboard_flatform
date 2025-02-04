@@ -1,0 +1,68 @@
+[
+  {
+    "mainMenu": "공통",
+    "subMenus": ["공통 레이아웃", "로그인"],
+    "smallMenus": ["-"],
+    "links": ["./pages/layout.html", "./pages/login.html"],
+    "completionDate": "25.01.22",
+    "status": "완료",
+    "updates": [
+      { "type": "N", "content": "[25.01.22] First Commit" }
+    ]
+  },
+  {
+    "mainMenu": "대시보드",
+    "subMenus": ["-"],
+    "smallMenus": ["-"],
+    "links": ["./pages/dashboard.html"],
+    "completionDate": "25.01.22",
+    "status": "완료",
+    "updates": [
+      { "type": "N", "content": "[25.01.22] First Commit" }
+    ]
+  },
+  {
+    "mainMenu": "이슈관리",
+    "subMenus": ["목록", "상세", "새 이슈 등록"],
+    "smallMenus": ["-"],
+    "links": ["./pages/issue_list.html", "./pages/issue_view.html", "./pages/issue_regist.html"],
+    "completionDate": "25.01.22",
+    "status": "완료",
+    "updates": [
+      { "type": "N", "content": "[25.01.22] First Commit" }
+    ]
+  },
+  {
+    "mainMenu": "통계/보고서",
+    "subMenus": ["통계/보고서", "기술지원 통계"],
+    "smallMenus": ["-"],
+    "links": ["./pages/board_stat_report.html", "./pages/board_stat_support.html"],
+    "completionDate": "25.01.22",
+    "status": "완료",
+    "updates": [
+      { "type": "N", "content": "[25.01.22] First Commit" }
+    ]
+  },
+  {
+    "mainMenu": "BS관리",
+    "subMenus": ["BS관리", "BS통계"],
+    "smallMenus": ["-"],
+    "links": ["./pages/board_bs_list.html", "./pages/board_bs_stat.html"],
+    "completionDate": "25.01.22",
+    "status": "완료",
+    "updates": [
+      { "type": "N", "content": "[25.01.22] First Commit" }
+    ]
+  },
+  {
+    "mainMenu": "결재함",
+    "subMenus": ["-"],
+    "smallMenus": ["-"],
+    "links": ["./pages/board_confirm.html"],
+    "completionDate": "25.01.22",
+    "status": "완료",
+    "updates": [
+      { "type": "N", "content": "[25.01.22] First Commit" }
+    ]
+  }
+]

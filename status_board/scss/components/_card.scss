@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.card {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0.4rem;
+  background-color: var(--gray_110);
+  border-radius: 0.4rem;
+  &_title {
+    @include heading_01;
+    display: block;
+    flex: none;
+    min-width: 0;
+    padding: 1.2rem;
+    hyphens: auto;
+    color: var(--gray_10);
+    & + .card_text {
+      padding-top: 0;
+    }
+  }
+  &_text {
+    @include body_01;
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 1.2rem 1.2rem;
+    color: var(--gray_30);
+    & + .card_text {
+      padding-top: 0;
+    }
+  }
+  .data_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: var(--gray_100);
+    border-radius: map-get($rounded, null);
+  }
+  &_actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.2rem 1.2rem;
+  }
+}

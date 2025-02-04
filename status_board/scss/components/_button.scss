@@ -1,0 +1,523 @@
+@charset "utf-8";
+
+$dark_color: (
+  primary_default: $danu_blue_60,
+  primary_default_hover: $blue_50,
+  primary_default_active: $blue_30,
+  gray_default: $gray_90,
+  gray_default_hover: $gray_80,
+  gray_default_active: $gray_60,
+  gray_line: $gray_30,
+  gray_line_hover: $gray_40,
+  gray_line_active: $gray_60,
+  red_default: $red_60,
+  red_default_hover: $red_50,
+  red_default_active: $red_30,
+  focus_white: white,
+  focus_black: black
+);
+
+$light_color: (
+  primary_default: $danu_blue_60,
+  primary_default_hover: $blue_50,
+  primary_default_active: $blue_30,
+  gray_default: $gray_90,
+  gray_default_hover: $gray_80,
+  gray_default_active: $gray_60,
+  gray_line: $gray_90,
+  gray_line_hover: $gray_80,
+  gray_line_active: $gray_60,
+  red_default: $red_60,
+  red_default_hover: $red_50,
+  red_default_active: $red_30,
+  focus_white: white,
+  focus_black: black
+);
+
+.d_btn {
+  @include body_02;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: map-get($btn-sizes, 'medium');
+  padding: 0 1.2rem;
+  line-height: normal;
+  background-color: map-get($dark_color, primary_default);
+  border-radius: map-get($rounded, null);
+  border: 2px solid map-get($dark_color, primary_default);
+  color: $white;
+  white-space: nowrap;
+  &.full {
+    width: 100%;
+  }
+  &:focus:not(:disabled) {
+    outline: 1px solid map-get($dark_color, focus_white);
+  }
+  &:hover:not(:disabled) {
+    background-color: map-get($dark_color, primary_default_hover);
+    border-color: map-get($dark_color, primary_default_hover);
+  }
+  &:active:not(:disabled) {
+    background-color: map-get($dark_color, primary_default_active);
+    border-color: map-get($dark_color, primary_default_active);
+  }
+  &:disabled {
+    opacity: 0.35;
+    cursor: auto;
+  }
+  &.outlined {
+    background-color: transparent;
+    border: 2px solid map-get($dark_color, primary_default);
+    color: map-get($dark_color, primary_default);
+    &:focus:not(:disabled) {
+      outline-color: map-get($dark_color, focus_white);
+    }
+    &:hover:not(:disabled) {
+      background-color: transparent;
+      border-color: map-get($dark_color, primary_default_hover);
+      color: map-get($dark_color, primary_default_hover);
+    }
+    &:active:not(:disabled) {
+      background-color: transparent;
+      border-color: map-get($dark_color, primary_default_active);
+      color: map-get($dark_color, primary_default_active);
+    }
+  }
+  &.ghost {
+    background-color: transparent;
+    border-color: transparent;
+    color: map-get($dark_color, primary_default);
+    &:hover:not(:disabled) {
+      background-color: transparent;
+      border-color: transparent;
+      color: map-get($dark_color, primary_default_hover);
+    }
+    &:active:not(:disabled) {
+      background-color: transparent;
+      border-color: transparent;
+      color: map-get($dark_color, primary_default_active);
+    }
+  }
+
+  // icon
+  .ico {
+    display: flex;
+    align-items: center;
+    i::before {
+      color: $white;
+    }
+    &_left {
+      padding-right: 0.8rem;
+    }
+    &_right {
+      padding-left: 0.8rem;
+    }
+  }
+  &.outlined,
+  &.ghost {
+    .ico {
+      i::before {
+        color: map-get($dark_color, primary_default);
+      }
+    }
+    &:hover:not(:disabled) {
+      .ico {
+        i::before {
+          color: map-get($dark_color, primary_default_hover);
+        }
+      }
+    }
+    &:active:not(:disabled) {
+      .ico {
+        i::before {
+          color: map-get($dark_color, primary_default_active);
+        }
+      }
+    }
+  }
+
+  // color
+  &_gray {
+    background-color: map-get($dark_color, gray_default);
+    border-color: map-get($dark_color, gray_default);
+    &:focus:not(:disabled) {
+      outline-color: map-get($dark_color, focus_white);
+    }
+    &:hover:not(:disabled) {
+      background-color: map-get($dark_color, gray_default_hover);
+      border-color: map-get($dark_color, gray_default_hover);
+    }
+    &:active:not(:disabled) {
+      background-color: map-get($dark_color, gray_default_active);
+      border-color: map-get($dark_color, gray_default_active);
+    }
+    &.outlined {
+      background-color: transparent;
+      border-color: map-get($dark_color, gray_line);
+      color: map-get($dark_color, gray_line);
+      &:focus:not(:disabled) {
+        outline-color: map-get($dark_color, focus_white);
+      }
+      &:hover:not(:disabled) {
+        border-color: map-get($dark_color, gray_line_hover);
+        color: map-get($dark_color, gray_line_hover) !important;
+      }
+      &:active:not(:disabled) {
+        border-color: map-get($dark_color, gray_line_active);
+        color: map-get($dark_color, gray_line_active) !important;
+      }
+    }
+    &.ghost {
+      color: map-get($dark_color, gray_line);
+      &:focus:not(:disabled) {
+        outline-color: map-get($dark_color, focus_white);
+      }
+      &:hover:not(:disabled) {
+        color: map-get($dark_color, gray_line_hover) !important;
+        background-color: none;
+      }
+      &:active:not(:disabled) {
+        color: map-get($dark_color, gray_line_active) !important;
+        background-color: none;
+      }
+    }
+    &.outlined,
+    &.ghost {
+      .ico {
+        i::before {
+          color: map-get($dark_color, gray_line);
+        }
+      }
+      &:hover:not(:disabled) {
+        .ico {
+          i::before {
+            color: map-get($dark_color, gray_line_hover);
+          }
+        }
+      }
+      &:active:not(:disabled) {
+        .ico {
+          i::before {
+            color: map-get($dark_color, gray_line_active);
+          }
+        }
+      }
+    }
+  }
+
+  &_red {
+    background-color: map-get($dark_color, red_default);
+    border-color: map-get($dark_color, red_default);
+    &:focus:not(:disabled) {
+      outline-color: map-get($dark_color, focus_white) !important;
+    }
+    &:hover:not(:disabled) {
+      background-color: map-get($dark_color, red_default_hover);
+      border-color: map-get($dark_color, red_default_hover);
+    }
+    &:active:not(:disabled) {
+      background-color: map-get($dark_color, red_default_active);
+      border-color: map-get($dark_color, red_default_active);
+    }
+    &.outlined {
+      background-color: transparent;
+      border-color: map-get($dark_color, red_default);
+      color: map-get($dark_color, red_default);
+      &:focus:not(:disabled) {
+        outline-color: map-get($dark_color, focus_white);
+      }
+      &:hover:not(:disabled) {
+        border-color: map-get($dark_color, red_default_hover);
+        color: map-get($dark_color, red_default_hover);
+      }
+      &:active:not(:disabled) {
+        border-color: map-get($dark_color, red_default_active);
+        color: map-get($dark_color, red_default_active);
+      }
+    }
+    &.ghost {
+      color: map-get($dark_color, red_default);
+      &:hover:not(:disabled) {
+        color: map-get($dark_color, red_default_hover) !important;
+        background-color: none;
+      }
+      &:active:not(:disabled) {
+        color: map-get($dark_color, red_default_active) !important;
+        background-color: none;
+      }
+      &:focus:not(:disabled) {
+        outline-color: map-get($dark_color, focus_white);
+      }
+    }
+    &.outlined,
+    &.ghost {
+      .ico {
+        i::before {
+          color: map-get($dark_color, red_default);
+        }
+      }
+      &:hover:not(:disabled) {
+        .ico {
+          i::before {
+            color: map-get($dark_color, red_default_hover);
+          }
+        }
+      }
+      &:active:not(:disabled) {
+        .ico {
+          i::before {
+            color: map-get($dark_color, red_default_active);
+          }
+        }
+      }
+    }
+  }
+
+  // size
+  &_sm {
+    @include body_01;
+    height: map-get($btn-sizes, 'small');
+    padding: 0 0.8rem;
+    line-height: normal;
+  }
+  &_md {
+    @include body_02;
+    height: map-get($btn-sizes, 'medium');
+    padding: 0 1.2rem;
+    line-height: normal;
+  }
+  &_lg {
+    @include body_03;
+    min-width: 8rem;
+    height: map-get($btn-sizes, 'large');
+    padding: 0 1.2rem;
+    line-height: normal;
+    .ico {
+      &_left {
+        padding-right: 1.2rem;
+      }
+      &_right {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+}
+
+// light_mode
+.light_mode {
+  .d_btn {
+    background-color: map-get($light_color, primary_default);
+    border: 2px solid map-get($light_color, primary_default);
+    color: $white;
+    &:focus:not(:disabled) {
+      outline: 1px solid map-get($light_color, focus_black);
+    }
+    &:hover:not(:disabled) {
+      background-color: map-get($light_color, primary_default_hover);
+      border-color: map-get($light_color, primary_default_hover);
+    }
+    &:active:not(:disabled) {
+      background-color: map-get($light_color, primary_default_active);
+      border-color: map-get($light_color, primary_default_active);
+    }
+    &.outlined {
+      background-color: transparent;
+      border: 2px solid map-get($light_color, primary_default);
+      color: map-get($light_color, primary_default);
+      &:focus:not(:disabled) {
+        outline-color: map-get($light_color, focus_black);
+      }
+      &:hover:not(:disabled) {
+        background-color: transparent;
+        border-color: map-get($light_color, primary_default_hover);
+        color: map-get($light_color, primary_default_hover);
+      }
+      &:active:not(:disabled) {
+        background-color: transparent;
+        border-color: map-get($light_color, primary_default_active);
+        color: map-get($light_color, primary_default_active);
+      }
+    }
+    &.ghost {
+      background-color: transparent;
+      border-color: transparent;
+      color: map-get($light_color, primary_default);
+      &:hover:not(:disabled) {
+        background-color: transparent;
+        border-color: transparent;
+        color: map-get($light_color, primary_default_hover);
+      }
+      &:active:not(:disabled) {
+        background-color: transparent;
+        border-color: transparent;
+        color: map-get($light_color, primary_default_active);
+      }
+    }
+
+    // icon
+    .ico {
+      i::before {
+        color: $white;
+      }
+    }
+    &.outlined,
+    &.ghost {
+      .ico {
+        i::before {
+          color: map-get($light_color, primary_default);
+        }
+      }
+      &:hover:not(:disabled) {
+        .ico {
+          i::before {
+            color: map-get($light_color, primary_default_hover);
+          }
+        }
+      }
+      &:active:not(:disabled) {
+        .ico {
+          i::before {
+            color: map-get($light_color, primary_default_active);
+          }
+        }
+      }
+    }
+
+    // color
+    &_gray {
+      background-color: map-get($light_color, gray_default);
+      border-color: map-get($light_color, gray_default);
+      &:focus:not(:disabled) {
+        outline-color: map-get($light_color, focus_black);
+      }
+      &:hover:not(:disabled) {
+        background-color: map-get($light_color, gray_default_hover);
+        border-color: map-get($light_color, gray_default_hover);
+      }
+      &:active:not(:disabled) {
+        background-color: map-get($light_color, gray_default_active);
+        border-color: map-get($light_color, gray_default_active);
+      }
+      &.outlined {
+        background-color: transparent;
+        border-color: map-get($light_color, gray_line);
+        color: map-get($light_color, gray_line);
+        &:focus:not(:disabled) {
+          outline-color: map-get($light_color, focus_black);
+        }
+        &:hover:not(:disabled) {
+          border-color: map-get($light_color, gray_line_hover);
+          color: map-get($light_color, gray_line_hover) !important;
+        }
+        &:active:not(:disabled) {
+          border-color: map-get($light_color, gray_line_active);
+          color: map-get($light_color, gray_line_active) !important;
+        }
+      }
+      &.ghost {
+        color: map-get($light_color, gray_line);
+        &:focus:not(:disabled) {
+          outline-color: map-get($light_color, focus_black);
+        }
+        &:hover:not(:disabled) {
+          color: map-get($light_color, gray_line_hover) !important;
+          background-color: none;
+        }
+        &:active:not(:disabled) {
+          color: map-get($light_color, gray_line_active) !important;
+          background-color: none;
+        }
+      }
+      &.outlined,
+      &.ghost {
+        .ico {
+          i::before {
+            color: map-get($light_color, gray_line);
+          }
+        }
+        &:hover:not(:disabled) {
+          .ico {
+            i::before {
+              color: map-get($light_color, gray_line_hover);
+            }
+          }
+        }
+        &:active:not(:disabled) {
+          .ico {
+            i::before {
+              color: map-get($light_color, gray_line_active);
+            }
+          }
+        }
+      }
+    }
+
+    &_red {
+      background-color: map-get($light_color, red_default);
+      border-color: map-get($light_color, red_default);
+      &:focus:not(:disabled) {
+        outline-color: map-get($light_color, focus_black) !important;
+      }
+      &:hover:not(:disabled) {
+        background-color: map-get($light_color, red_default_hover);
+        border-color: map-get($light_color, red_default_hover);
+      }
+      &:active:not(:disabled) {
+        background-color: map-get($light_color, red_default_active);
+        border-color: map-get($light_color, red_default_active);
+      }
+      &.outlined {
+        background-color: transparent;
+        border-color: map-get($light_color, red_default);
+        color: map-get($light_color, red_default);
+        &:focus:not(:disabled) {
+          outline-color: map-get($light_color, focus_black);
+        }
+        &:hover:not(:disabled) {
+          border-color: map-get($light_color, red_default_hover);
+          color: map-get($light_color, red_default_hover);
+        }
+        &:active:not(:disabled) {
+          border-color: map-get($light_color, red_default_active);
+          color: map-get($light_color, red_default_active);
+        }
+      }
+      &.ghost {
+        color: map-get($light_color, red_default);
+        &:hover:not(:disabled) {
+          color: map-get($light_color, red_default_hover) !important;
+          background-color: none;
+        }
+        &:active:not(:disabled) {
+          color: map-get($light_color, red_default_active) !important;
+          background-color: none;
+        }
+        &:focus:not(:disabled) {
+          outline-color: map-get($light_color, focus_black);
+        }
+      }
+      &.outlined,
+      &.ghost {
+        .ico {
+          i::before {
+            color: map-get($light_color, red_default);
+          }
+        }
+        &:hover:not(:disabled) {
+          .ico {
+            i::before {
+              color: map-get($light_color, red_default_hover);
+            }
+          }
+        }
+        &:active:not(:disabled) {
+          .ico {
+            i::before {
+              color: map-get($light_color, red_default_active);
+            }
+          }
+        }
+      }
+    }
+  }
+}

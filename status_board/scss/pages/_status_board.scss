@@ -1,0 +1,53 @@
+.status_board {
+  margin-top: 6rem;
+
+  .status_table {
+    td {
+      color: $gray_10;
+      a {
+        padding-left: 0.8rem;
+      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        .item {
+          .chip {
+            margin-right: 0.6rem;
+            &.gray {
+              color: $gray_40;
+              background: $gray_80;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .d_btn_md {
+    padding: 0;
+    & > a {
+      padding: 0 1.2rem;
+    }
+  }
+
+  .page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    .card {
+      background: $gray_100;
+    }
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+    }
+  }
+}

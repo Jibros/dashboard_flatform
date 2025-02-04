@@ -1,0 +1,1063 @@
+@charset "utf-8";
+
+.white {
+  background-color: $white !important;
+  border-color: $white !important;
+  &_text {
+    color: $white !important;
+    caret-color: $white !important;
+  }
+}
+.black {
+  background-color: $black !important;
+  border-color: $black !important;
+  &_text {
+    color: $black !important;
+    caret-color: $black !important;
+  }
+}
+
+.gray {
+  &_0 {
+    background-color: $gray_0 !important;
+    border-color: $gray_0 !important;
+    &_text {
+      color: $gray_0 !important;
+      caret-color: $gray_0 !important;
+    }
+  }
+  &_5 {
+    background-color: $gray_5 !important;
+    border-color: $gray_5 !important;
+    &_text {
+      color: $gray_5 !important;
+      caret-color: $gray_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $gray_10 !important;
+    border-color: $gray_10 !important;
+    &_text {
+      color: $gray_10 !important;
+      caret-color: $gray_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $gray_20 !important;
+    border-color: $gray_20 !important;
+    &_text {
+      color: $gray_20 !important;
+      caret-color: $gray_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $gray_30 !important;
+    border-color: $gray_30 !important;
+    &_text {
+      color: $gray_30 !important;
+      caret-color: $gray_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $gray_40 !important;
+    border-color: $gray_40 !important;
+    &_text {
+      color: $gray_40 !important;
+      caret-color: $gray_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $gray_50 !important;
+    border-color: $gray_50 !important;
+    &_text {
+      color: $gray_50 !important;
+      caret-color: $gray_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $gray_60 !important;
+    border-color: $gray_60 !important;
+    &_text {
+      color: $gray_60 !important;
+      caret-color: $gray_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $gray_70 !important;
+    border-color: $gray_70 !important;
+    &_text {
+      color: $gray_70 !important;
+      caret-color: $gray_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $gray_80 !important;
+    border-color: $gray_80 !important;
+    &_text {
+      color: $gray_80 !important;
+      caret-color: $gray_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $gray_90 !important;
+    border-color: $gray_90 !important;
+    &_text {
+      color: $gray_90 !important;
+      caret-color: $gray_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $gray_100 !important;
+    border-color: $gray_100 !important;
+    &_text {
+      color: $gray_100 !important;
+      caret-color: $gray_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $gray_110 !important;
+    border-color: $gray_110 !important;
+    &_text {
+      color: $gray_110 !important;
+      caret-color: $gray_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $gray_120 !important;
+    border-color: $gray_120 !important;
+    &_text {
+      color: $gray_120 !important;
+      caret-color: $gray_120 !important;
+    }
+  }
+}
+
+.danu_blue {
+  &_60 {
+    background-color: $danu_blue_60 !important;
+    border-color: $danu_blue_60 !important;
+    &_text {
+      color: $danu_blue_60 !important;
+      caret-color: $danu_blue_60 !important;
+    }
+  }
+  &_30 {
+    background-color: $danu_blue_30 !important;
+    border-color: $danu_blue_30 !important;
+    &_text {
+      color: $danu_blue_30 !important;
+      caret-color: $danu_blue_30 !important;
+    }
+  }
+  &_p {
+    background-color: $danu_blue_p !important;
+    border-color: $danu_blue_p !important;
+    &_text {
+      color: $danu_blue_p !important;
+      caret-color: $danu_blue_p !important;
+    }
+  }
+}
+
+.sys_green {
+  &_10 {
+    background-color: $sys_green_10 !important;
+    border-color: $sys_green_10 !important;
+    &_text {
+      color: $sys_green_10 !important;
+      caret-color: $sys_green_10 !important;
+    }
+  }
+  &_p {
+    background-color: $sys_green_p !important;
+    border-color: $sys_green_p !important;
+    &_text {
+      color: $sys_green_p !important;
+      caret-color: $sys_green_p !important;
+    }
+  }
+}
+
+.red {
+  &_5 {
+    background-color: $red_5 !important;
+    border-color: $red_5 !important;
+    &_text {
+      color: $red_5 !important;
+      caret-color: $red_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $red_10 !important;
+    border-color: $red_10 !important;
+    &_text {
+      color: $red_10 !important;
+      caret-color: $red_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $red_20 !important;
+    border-color: $red_20 !important;
+    &_text {
+      color: $red_20 !important;
+      caret-color: $red_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $red_30 !important;
+    border-color: $red_30 !important;
+    &_text {
+      color: $red_30 !important;
+      caret-color: $red_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $red_40 !important;
+    border-color: $red_40 !important;
+    &_text {
+      color: $red_40 !important;
+      caret-color: $red_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $red_50 !important;
+    border-color: $red_50 !important;
+    &_text {
+      color: $red_50 !important;
+      caret-color: $red_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $red_60 !important;
+    border-color: $red_60 !important;
+    &_text {
+      color: $red_60 !important;
+      caret-color: $red_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $red_70 !important;
+    border-color: $red_70 !important;
+    &_text {
+      color: $red_70 !important;
+      caret-color: $red_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $red_80 !important;
+    border-color: $red_80 !important;
+    &_text {
+      color: $red_80 !important;
+      caret-color: $red_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $red_90 !important;
+    border-color: $red_90 !important;
+    &_text {
+      color: $red_90 !important;
+      caret-color: $red_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $red_100 !important;
+    border-color: $red_100 !important;
+    &_text {
+      color: $red_100 !important;
+      caret-color: $red_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $red_110 !important;
+    border-color: $red_110 !important;
+    &_text {
+      color: $red_110 !important;
+      caret-color: $red_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $red_120 !important;
+    border-color: $red_120 !important;
+    &_text {
+      color: $red_120 !important;
+      caret-color: $red_120 !important;
+    }
+  }
+}
+
+.orange {
+  &_5 {
+    background-color: $orange_5 !important;
+    border-color: $orange_5 !important;
+    &_text {
+      color: $orange_5 !important;
+      caret-color: $orange_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $orange_10 !important;
+    border-color: $orange_10 !important;
+    &_text {
+      color: $orange_10 !important;
+      caret-color: $orange_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $orange_20 !important;
+    border-color: $orange_20 !important;
+    &_text {
+      color: $orange_20 !important;
+      caret-color: $orange_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $orange_30 !important;
+    border-color: $orange_30 !important;
+    &_text {
+      color: $orange_30 !important;
+      caret-color: $orange_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $orange_40 !important;
+    border-color: $orange_40 !important;
+    &_text {
+      color: $orange_40 !important;
+      caret-color: $orange_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $orange_50 !important;
+    border-color: $orange_50 !important;
+    &_text {
+      color: $orange_50 !important;
+      caret-color: $orange_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $orange_60 !important;
+    border-color: $orange_60 !important;
+    &_text {
+      color: $orange_60 !important;
+      caret-color: $orange_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $orange_70 !important;
+    border-color: $orange_70 !important;
+    &_text {
+      color: $orange_70 !important;
+      caret-color: $orange_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $orange_80 !important;
+    border-color: $orange_80 !important;
+    &_text {
+      color: $orange_80 !important;
+      caret-color: $orange_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $orange_90 !important;
+    border-color: $orange_90 !important;
+    &_text {
+      color: $orange_90 !important;
+      caret-color: $orange_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $orange_100 !important;
+    border-color: $orange_100 !important;
+    &_text {
+      color: $orange_100 !important;
+      caret-color: $orange_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $orange_110 !important;
+    border-color: $orange_110 !important;
+    &_text {
+      color: $orange_110 !important;
+      caret-color: $orange_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $orange_120 !important;
+    border-color: $orange_120 !important;
+    &_text {
+      color: $orange_120 !important;
+      caret-color: $orange_120 !important;
+    }
+  }
+}
+
+.yellow {
+  &_5 {
+    background-color: $yellow_5 !important;
+    border-color: $yellow_5 !important;
+    &_text {
+      color: $yellow_5 !important;
+      caret-color: $yellow_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $yellow_10 !important;
+    border-color: $yellow_10 !important;
+    &_text {
+      color: $yellow_10 !important;
+      caret-color: $yellow_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $yellow_20 !important;
+    border-color: $yellow_20 !important;
+    &_text {
+      color: $yellow_20 !important;
+      caret-color: $yellow_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $yellow_30 !important;
+    border-color: $yellow_30 !important;
+    &_text {
+      color: $yellow_30 !important;
+      caret-color: $yellow_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $yellow_40 !important;
+    border-color: $yellow_40 !important;
+    &_text {
+      color: $yellow_40 !important;
+      caret-color: $yellow_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $yellow_50 !important;
+    border-color: $yellow_50 !important;
+    &_text {
+      color: $yellow_50 !important;
+      caret-color: $yellow_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $yellow_60 !important;
+    border-color: $yellow_60 !important;
+    &_text {
+      color: $yellow_60 !important;
+      caret-color: $yellow_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $yellow_70 !important;
+    border-color: $yellow_70 !important;
+    &_text {
+      color: $yellow_70 !important;
+      caret-color: $yellow_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $yellow_80 !important;
+    border-color: $yellow_80 !important;
+    &_text {
+      color: $yellow_80 !important;
+      caret-color: $yellow_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $yellow_90 !important;
+    border-color: $yellow_90 !important;
+    &_text {
+      color: $yellow_90 !important;
+      caret-color: $yellow_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $yellow_100 !important;
+    border-color: $yellow_100 !important;
+    &_text {
+      color: $yellow_100 !important;
+      caret-color: $yellow_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $yellow_110 !important;
+    border-color: $yellow_110 !important;
+    &_text {
+      color: $yellow_110 !important;
+      caret-color: $yellow_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $yellow_120 !important;
+    border-color: $yellow_120 !important;
+    &_text {
+      color: $yellow_120 !important;
+      caret-color: $yellow_120 !important;
+    }
+  }
+}
+
+.green {
+  &_5 {
+    background-color: $green_5 !important;
+    border-color: $green_5 !important;
+    &_text {
+      color: $green_5 !important;
+      caret-color: $green_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $green_10 !important;
+    border-color: $green_10 !important;
+    &_text {
+      color: $green_10 !important;
+      caret-color: $green_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $green_20 !important;
+    border-color: $green_20 !important;
+    &_text {
+      color: $green_20 !important;
+      caret-color: $green_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $green_30 !important;
+    border-color: $green_30 !important;
+    &_text {
+      color: $green_30 !important;
+      caret-color: $green_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $green_40 !important;
+    border-color: $green_40 !important;
+    &_text {
+      color: $green_40 !important;
+      caret-color: $green_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $green_50 !important;
+    border-color: $green_50 !important;
+    &_text {
+      color: $green_50 !important;
+      caret-color: $green_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $green_60 !important;
+    border-color: $green_60 !important;
+    &_text {
+      color: $green_60 !important;
+      caret-color: $green_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $green_70 !important;
+    border-color: $green_70 !important;
+    &_text {
+      color: $green_70 !important;
+      caret-color: $green_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $green_80 !important;
+    border-color: $green_80 !important;
+    &_text {
+      color: $green_80 !important;
+      caret-color: $green_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $green_90 !important;
+    border-color: $green_90 !important;
+    &_text {
+      color: $green_90 !important;
+      caret-color: $green_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $green_100 !important;
+    border-color: $green_100 !important;
+    &_text {
+      color: $green_100 !important;
+      caret-color: $green_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $green_110 !important;
+    border-color: $green_110 !important;
+    &_text {
+      color: $green_110 !important;
+      caret-color: $green_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $green_120 !important;
+    border-color: $green_120 !important;
+    &_text {
+      color: $green_120 !important;
+      caret-color: $green_120 !important;
+    }
+  }
+}
+
+.cyan {
+  &_5 {
+    background-color: $cyan_5 !important;
+    border-color: $cyan_5 !important;
+    &_text {
+      color: $cyan_5 !important;
+      caret-color: $cyan_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $cyan_10 !important;
+    border-color: $cyan_10 !important;
+    &_text {
+      color: $cyan_10 !important;
+      caret-color: $cyan_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $cyan_20 !important;
+    border-color: $cyan_20 !important;
+    &_text {
+      color: $cyan_20 !important;
+      caret-color: $cyan_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $cyan_30 !important;
+    border-color: $cyan_30 !important;
+    &_text {
+      color: $cyan_30 !important;
+      caret-color: $cyan_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $cyan_40 !important;
+    border-color: $cyan_40 !important;
+    &_text {
+      color: $cyan_40 !important;
+      caret-color: $cyan_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $cyan_50 !important;
+    border-color: $cyan_50 !important;
+    &_text {
+      color: $cyan_50 !important;
+      caret-color: $cyan_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $cyan_60 !important;
+    border-color: $cyan_60 !important;
+    &_text {
+      color: $cyan_60 !important;
+      caret-color: $cyan_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $cyan_70 !important;
+    border-color: $cyan_70 !important;
+    &_text {
+      color: $cyan_70 !important;
+      caret-color: $cyan_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $cyan_80 !important;
+    border-color: $cyan_80 !important;
+    &_text {
+      color: $cyan_80 !important;
+      caret-color: $cyan_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $cyan_90 !important;
+    border-color: $cyan_90 !important;
+    &_text {
+      color: $cyan_90 !important;
+      caret-color: $cyan_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $cyan_100 !important;
+    border-color: $cyan_100 !important;
+    &_text {
+      color: $cyan_100 !important;
+      caret-color: $cyan_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $cyan_110 !important;
+    border-color: $cyan_110 !important;
+    &_text {
+      color: $cyan_110 !important;
+      caret-color: $cyan_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $cyan_120 !important;
+    border-color: $cyan_120 !important;
+    &_text {
+      color: $cyan_120 !important;
+      caret-color: $cyan_120 !important;
+    }
+  }
+}
+
+.blue {
+  &_5 {
+    background-color: $blue_5 !important;
+    border-color: $blue_5 !important;
+    &_text {
+      color: $blue_5 !important;
+      caret-color: $blue_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $blue_10 !important;
+    border-color: $blue_10 !important;
+    &_text {
+      color: $blue_10 !important;
+      caret-color: $blue_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $blue_20 !important;
+    border-color: $blue_20 !important;
+    &_text {
+      color: $blue_20 !important;
+      caret-color: $blue_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $blue_30 !important;
+    border-color: $blue_30 !important;
+    &_text {
+      color: $blue_30 !important;
+      caret-color: $blue_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $blue_40 !important;
+    border-color: $blue_40 !important;
+    &_text {
+      color: $blue_40 !important;
+      caret-color: $blue_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $blue_50 !important;
+    border-color: $blue_50 !important;
+    &_text {
+      color: $blue_50 !important;
+      caret-color: $blue_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $blue_60 !important;
+    border-color: $blue_60 !important;
+    &_text {
+      color: $blue_60 !important;
+      caret-color: $blue_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $blue_70 !important;
+    border-color: $blue_70 !important;
+    &_text {
+      color: $blue_70 !important;
+      caret-color: $blue_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $blue_80 !important;
+    border-color: $blue_80 !important;
+    &_text {
+      color: $blue_80 !important;
+      caret-color: $blue_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $blue_90 !important;
+    border-color: $blue_90 !important;
+    &_text {
+      color: $blue_90 !important;
+      caret-color: $blue_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $blue_100 !important;
+    border-color: $blue_100 !important;
+    &_text {
+      color: $blue_100 !important;
+      caret-color: $blue_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $blue_110 !important;
+    border-color: $blue_110 !important;
+    &_text {
+      color: $blue_110 !important;
+      caret-color: $blue_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $blue_120 !important;
+    border-color: $blue_120 !important;
+    &_text {
+      color: $blue_120 !important;
+      caret-color: $blue_120 !important;
+    }
+  }
+}
+
+.purple {
+  &_5 {
+    background-color: $purple_5 !important;
+    border-color: $purple_5 !important;
+    &_text {
+      color: $purple_5 !important;
+      caret-color: $purple_5 !important;
+    }
+  }
+  &_10 {
+    background-color: $purple_10 !important;
+    border-color: $purple_10 !important;
+    &_text {
+      color: $purple_10 !important;
+      caret-color: $purple_10 !important;
+    }
+  }
+  &_20 {
+    background-color: $purple_20 !important;
+    border-color: $purple_20 !important;
+    &_text {
+      color: $purple_20 !important;
+      caret-color: $purple_20 !important;
+    }
+  }
+  &_30 {
+    background-color: $purple_30 !important;
+    border-color: $purple_30 !important;
+    &_text {
+      color: $purple_30 !important;
+      caret-color: $purple_30 !important;
+    }
+  }
+  &_40 {
+    background-color: $purple_40 !important;
+    border-color: $purple_40 !important;
+    &_text {
+      color: $purple_40 !important;
+      caret-color: $purple_40 !important;
+    }
+  }
+  &_50 {
+    background-color: $purple_50 !important;
+    border-color: $purple_50 !important;
+    &_text {
+      color: $purple_50 !important;
+      caret-color: $purple_50 !important;
+    }
+  }
+  &_60 {
+    background-color: $purple_60 !important;
+    border-color: $purple_60 !important;
+    &_text {
+      color: $purple_60 !important;
+      caret-color: $purple_60 !important;
+    }
+  }
+  &_70 {
+    background-color: $purple_70 !important;
+    border-color: $purple_70 !important;
+    &_text {
+      color: $purple_70 !important;
+      caret-color: $purple_70 !important;
+    }
+  }
+  &_80 {
+    background-color: $purple_80 !important;
+    border-color: $purple_80 !important;
+    &_text {
+      color: $purple_80 !important;
+      caret-color: $purple_80 !important;
+    }
+  }
+  &_90 {
+    background-color: $purple_90 !important;
+    border-color: $purple_90 !important;
+    &_text {
+      color: $purple_90 !important;
+      caret-color: $purple_90 !important;
+    }
+  }
+  &_100 {
+    background-color: $purple_100 !important;
+    border-color: $purple_100 !important;
+    &_text {
+      color: $purple_100 !important;
+      caret-color: $purple_100 !important;
+    }
+  }
+  &_110 {
+    background-color: $purple_110 !important;
+    border-color: $purple_110 !important;
+    &_text {
+      color: $purple_110 !important;
+      caret-color: $purple_110 !important;
+    }
+  }
+  &_120 {
+    background-color: $purple_120 !important;
+    border-color: $purple_120 !important;
+    &_text {
+      color: $purple_120 !important;
+      caret-color: $purple_120 !important;
+    }
+  }
+}
+
+// light_mode
+.light_mode {
+  .white {
+    background-color: $black !important;
+    border-color: $black !important;
+    &_text {
+      color: $black !important;
+      caret-color: $black !important;
+    }
+  }
+  .black {
+    background-color: $white !important;
+    border-color: $white !important;
+    &_text {
+      color: $white !important;
+      caret-color: $white !important;
+    }
+  }
+
+  .gray {
+    &_0 {
+      background-color: $gray_120 !important;
+      border-color: $gray_120 !important;
+      &_text {
+        color: $gray_120 !important;
+        caret-color: $gray_120 !important;
+      }
+    }
+    &_5 {
+      background-color: $gray_110 !important;
+      border-color: $gray_110 !important;
+      &_text {
+        color: $gray_110 !important;
+        caret-color: $gray_110 !important;
+      }
+    }
+    &_10 {
+      background-color: $gray_100 !important;
+      border-color: $gray_100 !important;
+      &_text {
+        color: $gray_100 !important;
+        caret-color: $gray_100 !important;
+      }
+    }
+    &_20 {
+      background-color: $gray_90 !important;
+      border-color: $gray_90 !important;
+      &_text {
+        color: $gray_90 !important;
+        caret-color: $gray_90 !important;
+      }
+    }
+    &_30 {
+      background-color: $gray_80 !important;
+      border-color: $gray_80 !important;
+      &_text {
+        color: $gray_80 !important;
+        caret-color: $gray_80 !important;
+      }
+    }
+    &_40 {
+      background-color: $gray_70 !important;
+      border-color: $gray_70 !important;
+      &_text {
+        color: $gray_70 !important;
+        caret-color: $gray_70 !important;
+      }
+    }
+    &_50 {
+      background-color: $gray_60 !important;
+      border-color: $gray_60 !important;
+      &_text {
+        color: $gray_60 !important;
+        caret-color: $gray_60 !important;
+      }
+    }
+    &_60 {
+      background-color: $gray_50 !important;
+      border-color: $gray_50 !important;
+      &_text {
+        color: $gray_50 !important;
+        caret-color: $gray_50 !important;
+      }
+    }
+    &_70 {
+      background-color: $gray_40 !important;
+      border-color: $gray_40 !important;
+      &_text {
+        color: $gray_40 !important;
+        caret-color: $gray_40 !important;
+      }
+    }
+    &_80 {
+      background-color: $gray_30 !important;
+      border-color: $gray_30 !important;
+      &_text {
+        color: $gray_30 !important;
+        caret-color: $gray_30 !important;
+      }
+    }
+    &_90 {
+      background-color: $gray_20 !important;
+      border-color: $gray_20 !important;
+      &_text {
+        color: $gray_20 !important;
+        caret-color: $gray_20 !important;
+      }
+    }
+    &_100 {
+      background-color: $gray_10 !important;
+      border-color: $gray_10 !important;
+      &_text {
+        color: $gray_10 !important;
+        caret-color: $gray_10 !important;
+      }
+    }
+    &_110 {
+      background-color: $gray_5 !important;
+      border-color: $gray_5 !important;
+      &_text {
+        color: $gray_5 !important;
+        caret-color: $gray_5 !important;
+      }
+    }
+    &_120 {
+      background-color: $gray_0 !important;
+      border-color: $gray_0 !important;
+      &_text {
+        color: $gray_0 !important;
+        caret-color: $gray_0 !important;
+      }
+    }
+  }
+}

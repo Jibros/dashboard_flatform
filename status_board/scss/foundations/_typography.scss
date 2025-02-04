@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.heading_compact {
+  &_01 {
+    @include heading_compact_01;
+  }
+  &_02 {
+    @include heading_compact_02;
+  }
+  &_03 {
+    @include heading_compact_03;
+  }
+}
+.heading {
+  &_01 {
+    @include heading_01;
+  }
+  &_02 {
+    @include heading_02;
+  }
+  &_03 {
+    @include heading_03;
+  }
+  &_04 {
+    @include heading_04;
+  }
+  &_05 {
+    @include heading_05;
+  }
+  &_06 {
+    @include heading_06;
+  }
+  &_07 {
+    @include heading_07;
+  }
+  &_08 {
+    @include heading_08;
+  }
+  &_09 {
+    @include heading_09;
+  }
+  &_10 {
+    @include heading_10;
+  }
+}
+.body_compact {
+  &_01 {
+    @include body_compact_01;
+  }
+  &_02 {
+    @include body_compact_02;
+  }
+  &_03 {
+    @include body_compact_03;
+  }
+}
+.body {
+  &_01 {
+    @include body_01;
+  }
+  &_02 {
+    @include body_02;
+  }
+  &_03 {
+    @include body_03;
+  }
+}
+.code {
+  &_01 {
+    @include code_01;
+  }
+  &_02 {
+    @include code_02;
+  }
+}
+.label {
+  &_01 {
+    @include label_01;
+  }
+  &_02 {
+    @include label_02;
+  }
+}
+.helper_text {
+  &_01 {
+    @include helper_text_01;
+  }
+  &_02 {
+    @include helper_text_02;
+  }
+}
+.legal {
+  &_01 {
+    @include legal_01;
+  }
+  &_02 {
+    @include legal_02;
+  }
+}

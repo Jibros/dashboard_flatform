@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $headerH;
+  padding: 0 1.6rem;
+  z-index: 102;
+  background: $gray_110;
+  border-bottom: 1px solid $gray_110;
+  a {
+    display: flex;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    img {
+      width: 9rem;
+    }
+    .txt {
+      @include body_03;
+      padding: 0 0 0 1.2rem;
+      color: $white;
+    }
+  }
+  .gnb {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    max-width: 90rem;
+    padding: 0 5rem;
+    flex: 1;
+    li {
+      flex: 0 0 15rem;
+      a {
+        @include body_03;
+        display: flex;
+        position: relative;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        color: $gray_30;
+        text-align: center;
+        white-space: nowrap;
+      }
+      &.on,
+      &:hover {
+        a {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0.4rem;
+            background: $danu_blue_30;
+          }
+          color: $danu_blue_30;
+        }
+      }
+      &:hover {
+        .lnb {
+          display: block;
+        }
+      }
+      .lnb {
+        display: none;
+        @include hard_shadow_8;
+        padding: 0.4rem 0;
+        border-radius: 0.4rem;
+        background: $gray_100;
+        overflow: hidden;
+        li {
+          a {
+            @include body_01;
+            min-height: 3.2rem;
+            color: $gray_10;
+            justify-content: left;
+            &::after {
+              background: none;
+            }
+          }
+        }
+        &.group {
+          background: $gray_110;
+          padding: 0;
+          .g_title {
+            @include heading_01;
+            padding: 2rem 1rem 1rem;
+            color: $gray_10;
+          }
+          ul {
+            padding: 0.4rem 0 1.2rem;
+            background: $gray_100;
+          }
+        }
+      }
+    }
+  }
+  .utils {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    height: 100%;
+    li {
+      height: 100%;
+      border-left: 1px solid $gray_90;
+      button {
+        padding: 0 2.4rem;
+        color: $white;
+      }
+      &.user {
+        display: flex;
+        align-items: center;
+        button {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          i {
+            display: block;
+            margin: 0 1rem 0 0;
+            &::before {
+              color: $gray_30;
+              font-size: 2.4rem;
+            }
+          }
+          .txt {
+            @include heading_02;
+            color: $gray_30;
+          }
+        }
+      }
+      &.logout {
+        display: flex;
+        align-items: center;
+        button {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          i {
+            display: block;
+            margin: 0 0.8rem 0 0;
+            &::before {
+              color: $gray_30;
+              font-size: 2.4rem;
+            }
+          }
+          .txt {
+            @include heading_02;
+            color: $gray_30;
+          }
+        }
+      }
+    }
+  }
+}
+
+// light_mode
+.light_mode {
+  .header {
+    background: $white;
+    border-bottom: 1px solid $gray_5;
+    .logo {
+      img {
+        filter: invert(22%) sepia(76%) saturate(5757%) hue-rotate(196deg) brightness(85%) contrast(101%);
+      }
+      .txt {
+        color: $gray_110;
+      }
+    }
+    .gnb {
+      li {
+        a {
+          color: $gray_70;
+        }
+        .lnb {
+          background: $gray_5;
+          li {
+            a {
+              color: $gray_110;
+            }
+          }
+          &.group {
+            background: $gray_0;
+            .g_title {
+              color: $gray_90;
+            }
+            ul {
+              background: $gray_5;
+            }
+          }
+        }
+      }
+    }
+    .utils {
+      li {
+        border-left: 1px solid $gray_5;
+        button {
+          color: $black;
+        }
+        &.user {
+          button {
+            i {
+              &::before {
+                color: $gray_70;
+              }
+            }
+            .txt {
+              color: $gray_70;
+            }
+          }
+        }
+        &.logout {
+          button {
+            i {
+              &::before {
+                color: $gray_70;
+              }
+            }
+            .txt {
+              color: $gray_70;
+            }
+          }
+        }
+      }
+    }
+  }
+}

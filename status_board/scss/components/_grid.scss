@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@function grid($number) {
+  @return 6.25% * $number;
+}
+.d {
+  &_container {
+    width: 100%;
+    padding: 1.6rem;
+    margin-right: auto;
+    margin-left: auto;
+    & + .d_container {
+      margin-top: -1.6rem;
+    }
+  }
+  &_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.8rem;
+    & + .d_row {
+      margin-top: 0.8rem;
+    }
+    &.no_gutters {
+      margin: 0;
+      .d_col,
+      [class*='d_col_'] {
+        padding: 0;
+      }
+    }
+  }
+  &_col {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  @for $i from 1 to 17 {
+    &_col_#{$i} {
+      width: 100%;
+      padding: 0.8rem;
+    }
+  }
+  &_col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  &_col_auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  @for $i from 1 to 17 {
+    &_col_#{$i} {
+      max-width: #{grid($i)};
+      flex: 0 0 #{grid($i)};
+    }
+  }
+}
+
+.spacer {
+  flex-grow: 1 !important;
+}

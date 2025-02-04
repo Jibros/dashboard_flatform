@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@function margin_all($number) {
+  @return 0.4rem * $number;
+}
+@function margin_x($number) {
+  @return 0.4rem * $number;
+}
+@function margin_y($number) {
+  @return 0.4rem * $number;
+}
+@function margin_top($number) {
+  @return 0.4rem * $number;
+}
+@function margin_left($number) {
+  @return 0.4rem * $number;
+}
+@function margin_right($number) {
+  @return 0.4rem * $number;
+}
+@function margin_bottom($number) {
+  @return 0.4rem * $number;
+}
+@function padding_all($number) {
+  @return 0.4rem * $number;
+}
+@function padding_x($number) {
+  @return 0.4rem * $number;
+}
+@function padding_y($number) {
+  @return 0.4rem * $number;
+}
+@function padding_top($number) {
+  @return 0.4rem * $number;
+}
+@function padding_left($number) {
+  @return 0.4rem * $number;
+}
+@function padding_right($number) {
+  @return 0.4rem * $number;
+}
+@function padding_bottom($number) {
+  @return 0.4rem * $number;
+}

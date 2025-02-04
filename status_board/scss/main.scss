@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// 1. Configuration
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+
+// 2. Plugins
+// @import 'plugins/datepicker';
+
+// 3. Foundations
+@import 'foundations/color', 'foundations/typography', 'foundations/shadow', 'foundations/helpers';
+
+// 4. Base stuff
+@import 'base/reset', 'base/common', 'base/header', 'base/iconfonts';
+
+// 5. Components
+@import 'components/grid', 'components/button', 'components/chip', 'components/card';
+
+// 6. Patterns
+@import 'patterns/heading', 'patterns/table', 'patterns/empty';
+
+// 6. Page-specific styles
+@import 'pages/status_board';

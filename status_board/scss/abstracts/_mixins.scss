@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+// typography token
+//heading-compact
+@mixin heading_compact_01 {
+  font: {
+    size: 1.4rem;
+    weight: 700;
+  }
+  line-height: 1.8rem;
+  letter-spacing: 0.016rem;
+}
+@mixin heading_compact_02 {
+  font: {
+    size: 1.6rem;
+    weight: 700;
+  }
+  line-height: 2.2rem;
+  letter-spacing: 0;
+}
+@mixin heading_compact_03 {
+  font: {
+    size: 1.8rem;
+    weight: 700;
+  }
+  line-height: 2.6rem;
+  letter-spacing: 0;
+}
+// heading
+@mixin heading_01 {
+  font: {
+    size: 1.4rem;
+    weight: 700;
+  }
+  line-height: 2rem;
+  letter-spacing: 0.016rem;
+}
+@mixin heading_02 {
+  font: {
+    size: 1.6rem;
+    weight: 700;
+  }
+  line-height: 2.4rem;
+  letter-spacing: 0;
+}
+@mixin heading_03 {
+  font: {
+    size: 1.8rem;
+    weight: 700;
+  }
+  line-height: 2.8rem;
+  letter-spacing: 0;
+}
+@mixin heading_04 {
+  font: {
+    size: 2rem;
+    weight: 400;
+  }
+  line-height: 2.8rem;
+  letter-spacing: 0;
+}
+@mixin heading_05 {
+  font: {
+    size: 2.4rem;
+    weight: 400;
+  }
+  line-height: 3.2rem;
+  letter-spacing: 0;
+}
+@mixin heading_06 {
+  font: {
+    size: 2.8rem;
+    weight: 400;
+  }
+  line-height: 3.6rem;
+  letter-spacing: 0;
+}
+@mixin heading_07 {
+  font: {
+    size: 3.2rem;
+    weight: 300;
+  }
+  line-height: 4rem;
+  letter-spacing: 0;
+}
+@mixin heading_08 {
+  font: {
+    size: 3.6rem;
+    weight: 300;
+  }
+  line-height: 4.4rem;
+  letter-spacing: 0;
+}
+@mixin heading_09 {
+  font: {
+    size: 4.8rem;
+    weight: 300;
+  }
+  line-height: 5.8rem;
+  letter-spacing: 0;
+}
+@mixin heading_10 {
+  font: {
+    size: 6rem;
+    weight: 300;
+  }
+  line-height: 7.2rem;
+  letter-spacing: 0;
+}
+//body-compact
+@mixin body-compact_01 {
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 1.8rem;
+  letter-spacing: 0.016rem;
+}
+@mixin body-compact_02 {
+  font: {
+    size: 1.6rem;
+    weight: 400;
+  }
+  line-height: 2.2rem;
+  letter-spacing: 0;
+}
+@mixin body-compact_03 {
+  font: {
+    size: 1.8rem;
+    weight: 400;
+  }
+  line-height: 2.6rem;
+  letter-spacing: 0;
+}
+// body
+@mixin body_01 {
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 2rem;
+  letter-spacing: 0.016rem;
+}
+@mixin body_02 {
+  font: {
+    size: 1.6rem;
+    weight: 400;
+  }
+  line-height: 2.4rem;
+  letter-spacing: 0;
+}
+@mixin body_03 {
+  font: {
+    size: 1.8rem;
+    weight: 400;
+  }
+  line-height: 2.8rem;
+  letter-spacing: 0;
+}
+// utility
+@mixin code_01 {
+  font: {
+    size: 1.2rem;
+    weight: 400;
+  }
+  line-height: 1.6rem;
+  letter-spacing: 0.032rem;
+}
+@mixin code_02 {
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 2rem;
+  letter-spacing: 0.032rem;
+}
+@mixin label_01 {
+  font: {
+    size: 1.2rem;
+    weight: 400;
+  }
+  line-height: 1.6rem;
+  letter-spacing: 0.032rem;
+}
+@mixin label_02 {
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 1.8rem;
+  letter-spacing: 0.016rem;
+}
+@mixin helper_text_01 {
+  font: {
+    size: 1.2rem;
+    weight: 400;
+  }
+  line-height: 1.6rem;
+  letter-spacing: 0.032rem;
+}
+@mixin helper_text_02 {
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 1.8rem;
+  letter-spacing: 0.016rem;
+}
+@mixin legal_01 {
+  font: {
+    size: 1.2rem;
+    weight: 400;
+  }
+  line-height: 1.6rem;
+  letter-spacing: 0.032rem;
+}
+@mixin legal_02 {
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 1.8rem;
+  letter-spacing: 0.016rem;
+}
+// shadow token
+@mixin soft_shadow_2 {
+  box-shadow: 0px 0px 8px rgba($color: #000000, $alpha: 0.16);
+}
+@mixin hard_shadow_2 {
+  box-shadow: 0px 2px 3px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin mixed_shadow_2 {
+  box-shadow: 0px 2px 8px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin soft_shadow_4 {
+  box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.16);
+}
+@mixin hard_shadow_4 {
+  box-shadow: 0px 4px 6px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin mixed_shadow_4 {
+  box-shadow: 0px 4px 16px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin soft_shadow_8 {
+  box-shadow: 0px 0px 32px rgba($color: #000000, $alpha: 0.16);
+}
+@mixin hard_shadow_8 {
+  box-shadow: 0px 8px 12px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin mixed_shadow_8 {
+  box-shadow: 0px 8px 32px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin soft_shadow_12 {
+  box-shadow: 0px 0px 48px rgba($color: #000000, $alpha: 0.16);
+}
+@mixin hard_shadow_12 {
+  box-shadow: 0px 12px 18px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin mixed_shadow_12 {
+  box-shadow: 0px 12px 48px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin soft_shadow_16 {
+  box-shadow: 0px 0px 64px rgba($color: #000000, $alpha: 0.16);
+}
+@mixin hard_shadow_16 {
+  box-shadow: 0px 16px 24px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin mixed_shadow_16 {
+  box-shadow: 0px 16px 64px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin soft_shadow_24 {
+  box-shadow: 0px 0px 96px rgba($color: #000000, $alpha: 0.16);
+}
+@mixin hard_shadow_24 {
+  box-shadow: 0px 24px 36px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin mixed_shadow_24 {
+  box-shadow: 0px 24px 96px rgba($color: #000000, $alpha: 0.32);
+}
+@mixin hidden {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}

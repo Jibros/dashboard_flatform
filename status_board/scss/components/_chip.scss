@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+$chip: (
+  red: $red_60,
+  orange: $orange_40,
+  yellow: $yellow_20,
+  green: $green_20,
+  cyan: $cyan_30,
+  blue: $danu_blue_60,
+  purple: $purple_60,
+  gray: $gray_30,
+  dark_gray: $gray_80,
+  white: $white,
+  black: $black
+);
+
+.chip_group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  @at-root .chip {
+    @include label_02;
+    display: inline-flex;
+    align-items: center;
+    height: 2.6rem;
+    padding: 0 0.8rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    &.red {
+      background: map-get($chip, red);
+      color: map-get($chip, white);
+    }
+    &.orange {
+      background: map-get($chip, orange);
+      color: map-get($chip, black);
+    }
+    &.yellow {
+      background: map-get($chip, yellow);
+      color: map-get($chip, black);
+    }
+    &.green {
+      background: map-get($chip, green);
+      color: map-get($chip, black);
+    }
+    &.cyan {
+      background: map-get($chip, cyan);
+      color: map-get($chip, black);
+    }
+    &.blue {
+      background: map-get($chip, blue);
+      color: map-get($chip, white);
+    }
+    &.purple {
+      background: map-get($chip, purple);
+      color: map-get($chip, white);
+    }
+    &.gray {
+      background: map-get($chip, gray);
+      color: map-get($chip, black);
+    }
+    &.dark_gray {
+      background: map-get($chip, dark_gray);
+      color: map-get($chip, white);
+    }
+    &.white {
+      background: map-get($chip, white);
+      color: map-get($chip, black);
+    }
+    &.black {
+      background: map-get($chip, black);
+      color: map-get($chip, white);
+    }
+
+    // outlined style
+    &.outlined {
+      background: transparent !important;
+      &.red {
+        border: 2px solid map-get($chip, red);
+        color: map-get($chip, red);
+      }
+      &.orange {
+        border: 2px solid map-get($chip, orange);
+        color: map-get($chip, orange);
+      }
+      &.yellow {
+        border: 2px solid map-get($chip, yellow);
+        color: map-get($chip, yellow);
+      }
+      &.green {
+        border: 2px solid map-get($chip, green);
+        color: map-get($chip, green);
+      }
+      &.cyan {
+        border: 2px solid map-get($chip, cyan);
+        color: map-get($chip, cyan);
+      }
+      &.blue {
+        border: 2px solid map-get($chip, blue);
+        color: map-get($chip, blue);
+      }
+      &.purple {
+        border: 2px solid map-get($chip, purple);
+        color: map-get($chip, purple);
+      }
+      &.gray {
+        border: 2px solid map-get($chip, gray);
+        color: map-get($chip, gray);
+      }
+      &.dark_gray {
+        border: 2px solid map-get($chip, dark_gray);
+        color: map-get($chip, dark_gray);
+      }
+      &.white {
+        border: 2px solid map-get($chip, white);
+        color: map-get($chip, white);
+      }
+      &.black {
+        border: 2px solid map-get($chip, black);
+        color: map-get($chip, black);
+      }
+    }
+  }
+}
+
+.light_mode {
+  .chip_group {
+    @at-root .chip {
+      &.white {
+        background: map-get($chip, white) !important;
+        color: map-get($chip, black) !important;
+      }
+      &.black {
+        border: 2px solid map-get($chip, black) !important;
+        background: map-get($chip, black) !important;
+        color: map-get($chip, white) !important;
+      }
+
+      // outlined style
+      &.outlined {
+        &.white {
+          border: 2px solid map-get($chip, black) !important;
+          color: map-get($chip, black) !important;
+        }
+        &.black {
+          border: 2px solid map-get($chip, black) !important;
+          color: map-get($chip, white) !important;
+        }
+      }
+    }
+  }
+}

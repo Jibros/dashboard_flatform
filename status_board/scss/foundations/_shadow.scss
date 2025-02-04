@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// shadow token
+.soft_shadow_2 {
+  @include soft_shadow_2;
+}
+
+.hard_shadow_2 {
+  @include hard_shadow_2;
+}
+
+.mixed_shadow_2 {
+  @include mixed_shadow_2;
+}
+
+.soft_shadow_4 {
+  @include soft_shadow_4;
+}
+
+.hard_shadow_4 {
+  @include hard_shadow_4;
+}
+
+.mixed_shadow_4 {
+  @include mixed_shadow_4;
+}
+
+.soft_shadow_8 {
+  @include soft_shadow_8;
+}
+
+.hard_shadow_8 {
+  @include hard_shadow_8;
+}
+
+.mixed_shadow_8 {
+  @include mixed_shadow_8;
+}
+
+.soft_shadow_12 {
+  @include soft_shadow_12;
+}
+
+.hard_shadow_12 {
+  @include hard_shadow_12;
+}
+
+.mixed_shadow_12 {
+  @include mixed_shadow_12;
+}
+
+.soft_shadow_16 {
+  @include soft_shadow_16;
+}
+
+.hard_shadow_16 {
+  @include hard_shadow_16;
+}
+
+.mixed_shadow_16 {
+  @include mixed_shadow_16;
+}
+
+.soft_shadow_24 {
+  @include soft_shadow_24;
+}
+
+.hard_shadow_24 {
+  @include hard_shadow_24;
+}
+
+.mixed_shadow_24 {
+  @include mixed_shadow_24;
+}
